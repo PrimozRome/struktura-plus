@@ -1,0 +1,317 @@
+/* Struktura Plus — komponentni razredi.
+   Vse vrednosti iz žetonov (tokens.css). Layout dela Tailwind, te razrede
+   uporabljamo za komponente, ki imajo lastno obliko in stanja. */
+
+@layer components {
+  /* --- Nadnaslov --------------------------------------------------------- */
+  .sp-eyebrow {
+    font-family: var(--font-body);
+    font-size: var(--text-eyebrow);
+    font-weight: 600;
+    letter-spacing: var(--tracking-eyebrow);
+    text-transform: uppercase;
+    color: var(--accent-text);
+  }
+
+  /* --- Gumbi ------------------------------------------------------------- */
+  .sp-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    min-height: 48px;
+    padding-inline: var(--space-6);
+    border-radius: var(--radius-sm);
+    border: 1px solid transparent;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color var(--duration-fast) var(--ease),
+      border-color var(--duration-fast) var(--ease), color var(--duration-fast) var(--ease);
+  }
+  @media (min-width: 768px) {
+    .sp-btn { min-height: 44px; }
+  }
+  .sp-btn--primary { background: var(--primary); color: var(--primary-fg); }
+  .sp-btn--primary:hover { background: var(--primary-hover); color: var(--primary-fg); }
+  .sp-btn--secondary { background: transparent; color: var(--text); border-color: var(--border-strong); }
+  .sp-btn--secondary:hover { border-color: var(--text); color: var(--text); }
+  .sp-btn--ghost { background: transparent; color: var(--link); padding-inline: 0; min-height: 32px; }
+  .sp-btn--ghost:hover { text-decoration: underline; text-underline-offset: 0.18em; }
+  .sp-btn--onDark { background: var(--les-200); color: var(--les-950); }
+  .sp-btn--onDark:hover { background: var(--les-100); color: var(--les-950); }
+  .sp-btn:disabled { opacity: 0.45; pointer-events: none; }
+
+  /* --- Obrazec ----------------------------------------------------------- */
+  .sp-label { font-size: var(--text-body-sm); font-weight: 500; color: var(--text); }
+  .sp-req { color: var(--napaka); }
+  .sp-input, .sp-select, .sp-textarea {
+    font-family: var(--font-body);
+    font-size: 16px;
+    color: var(--text);
+    background: var(--surface);
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius-sm);
+    padding-inline: var(--space-4);
+    min-height: 48px;
+    width: 100%;
+  }
+  .sp-textarea { padding-block: var(--space-3); min-height: 128px; line-height: 1.6; resize: vertical; }
+  .sp-input::placeholder, .sp-textarea::placeholder { color: var(--text-subtle); }
+  .sp-input:focus-visible, .sp-select:focus-visible, .sp-textarea:focus-visible {
+    outline: var(--border-width-strong) solid var(--ring);
+    outline-offset: 2px;
+    border-color: var(--border-strong);
+  }
+  /* --- Polje za priloge --------------------------------------------------- */
+  /* Območje za spust je kar <input type="file"> sam, le velik in s črtkanim
+     robom. Brskalniki na datotečni vnos spuščene datoteke sprejmejo že sami,
+     zato povleci-in-spusti deluje brez ene vrstice JavaScripta — in ker je
+     vnos viden, ob izbiri sam izpiše imena datotek. Prekrivanje s <label> bi
+     nam vzelo oboje: spust nanj ne deluje, imen pa brez skripte ne izrišemo. */
+  .sp-file {
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--text-muted);
+    background: var(--bg-subtle);
+    border: 2px dashed var(--border-strong);
+    border-radius: var(--radius-md);
+    padding: var(--space-5) var(--space-4);
+    width: 100%;
+    cursor: pointer;
+  }
+  .sp-file::file-selector-button {
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--text);
+    background: var(--surface);
+    border: var(--border-width) solid var(--border-strong);
+    border-radius: var(--radius-sm);
+    padding: var(--space-2) var(--space-4);
+    margin-inline-end: var(--space-4);
+    min-height: 40px;
+    cursor: pointer;
+  }
+  .sp-file::file-selector-button:hover { background: var(--bg-subtle); }
+  .sp-file:focus-visible {
+    outline: var(--border-width-strong) solid var(--ring);
+    outline-offset: 2px;
+    border-color: var(--les-500);
+  }
+  .sp-file:hover { border-color: var(--les-500); }
+
+  /* --- Mnenje ------------------------------------------------------------ */
+  /* Okrasni narekovaj ob mnenju. Je okras in ne ločilo — pravo narekovanje
+     nosi element blockquote — zato je skrit bralnikom zaslona in zato sme biti
+     visoki "66" znak, ki je kot ločilo v slovenščini zaključni, kot okras pa
+     bolj prepoznaven od nizkega.
+     Nizka višina ob veliki stopnji: znak ima v svoji vrstici ogromno praznega
+     prostora nad črkovno črto, zato ga stisnemo na dejansko višino črnila,
+     sicer prva vrstica besedila odplava predaleč navzdol. */
+  .sp-narekovaj {
+    flex: none;
+    height: 30px;
+    font-family: var(--font-display);
+    font-size: 54px;
+    line-height: 0.92;
+    color: var(--les-300);
+  }
+
+  .sp-hint { font-size: var(--text-caption); color: var(--text-muted); }
+  .sp-error { font-size: var(--text-caption); color: var(--napaka); }
+
+  /* --- Kartica ----------------------------------------------------------- */
+  /* Kartica je klikljiva po celotni ploskvi (glej .sp-card__link), zato se ob
+     prehodu z miško odzove kot cel predmet: dvigne se in dobi senco, slika se
+     počasneje približa. Premik je majhen (4 px) — dovolj, da se opazi, premalo,
+     da bi premetaval mrežo. Ob kliku se spusti na 1 px, da ima gumbast odziv. */
+  .sp-card {
+    position: relative;
+    background: var(--surface);
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transform: translateY(0);
+    box-shadow: var(--shadow-sm);
+    transition:
+      transform var(--duration-base) var(--ease-out),
+      box-shadow var(--duration-base) var(--ease-out),
+      border-color var(--duration-base) var(--ease);
+  }
+  .sp-card:hover,
+  .sp-card:focus-within {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lift);
+    border-color: var(--border-strong);
+  }
+  .sp-card:active { transform: translateY(-1px); }
+
+  /* Kartica brez povezave (npr. mnenje) naj se ne dviguje — dvig obljublja klik. */
+  .sp-card--static:hover,
+  .sp-card--static:focus-within,
+  .sp-card--static:active {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+    border-color: var(--border);
+  }
+
+  .sp-card__media { position: relative; overflow: hidden; background: var(--bg-muted); }
+  /* Slika je zavita v <picture>, zato ne sme biti neposredni potomec. */
+  .sp-card__media img { transition: transform var(--duration-slow) var(--ease-out); }
+  .sp-card:hover .sp-card__media img { transform: scale(1.04); }
+
+  /* Razteg povezave na celo kartico — brez JavaScripta in brez ugnezdenih
+     povezav. Naslov ostane edina prava povezava, zato je bralnik zaslona in
+     tipkovnica ne zaznata drugače. */
+  .sp-card__link::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+  /* Prave povezave v kartici (npr. v besedilu) morajo ostati dosegljive. */
+  .sp-card a:not(.sp-card__link) { position: relative; z-index: 2; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .sp-card:hover, .sp-card:focus-within, .sp-card:active { transform: none; }
+    .sp-card:hover .sp-card__media img { transform: none; }
+  }
+
+  /* --- Značka ------------------------------------------------------------ */
+  .sp-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-size: var(--text-caption);
+    font-weight: 500;
+    padding: 5px var(--space-3);
+    border-radius: var(--radius-pill);
+    background: var(--primary-soft);
+    color: var(--text);
+    border: 1px solid transparent;
+    text-decoration: none;
+  }
+  .sp-tag--outline { background: transparent; border-color: var(--border); color: var(--text-muted); }
+  .sp-tag--active { background: var(--primary); color: var(--primary-fg); }
+
+  /* --- Cenovni blok ------------------------------------------------------ */
+  .sp-price {
+    background: var(--bg-muted);
+    border: var(--border-width) solid var(--border);
+    border-radius: var(--radius-md);
+    padding: var(--space-6);
+  }
+  .sp-price__range {
+    font-family: var(--font-display);
+    font-size: var(--text-h2);
+    line-height: var(--leading-snug);
+    font-weight: 600;
+    letter-spacing: var(--tracking-tight);
+    font-variant-numeric: tabular-nums;
+    color: var(--text);
+  }
+
+  /* --- FAQ --------------------------------------------------------------- */
+  .sp-faq { border-top: var(--border-width) solid var(--border); }
+  .sp-faq__item { border-bottom: var(--border-width) solid var(--border); }
+  .sp-faq__q {
+    width: 100%;
+    cursor: pointer;
+    list-style: none;
+    font-family: var(--font-display);
+    font-size: var(--text-h4);
+    font-weight: 600;
+    color: var(--text);
+    padding-block: var(--space-5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: var(--space-4);
+  }
+  .sp-faq__q::-webkit-details-marker { display: none; }
+  .sp-faq__q:focus-visible { outline: var(--border-width-strong) solid var(--ring); outline-offset: 2px; }
+  .sp-faq__sign { flex: none; width: 16px; height: 16px; position: relative; }
+  .sp-faq__sign::before, .sp-faq__sign::after { content: ""; position: absolute; background: var(--accent-text); }
+  .sp-faq__sign::before { inset: 7px 0; height: 2px; }
+  .sp-faq__sign::after { inset: 0 7px; width: 2px; transition: opacity var(--duration-fast) var(--ease); }
+  .sp-faq__item[open] .sp-faq__sign::after { opacity: 0; }
+
+  /* --- Leseno ločilo ----------------------------------------------------- */
+  .sp-rule {
+    height: 2px;
+    border: 0;
+    background: linear-gradient(90deg, var(--les-700) 0%, var(--les-500) 38%, var(--les-300) 62%, transparent 100%);
+  }
+
+  /* --- Poudarjena izjava -------------------------------------------------- */
+  /* Za eno samo trditev, ki jo mora bralec videti tudi ob preletu strani —
+     npr. "stran ne uporablja piškotkov". Namenoma brez ikone in brez barve
+     opozorila: gre za dejstvo, ne za napako. */
+  .sp-note {
+    border-inline-start: 3px solid var(--les-500);
+    background: var(--bg-subtle);
+    border-radius: var(--radius-sm);
+    padding: var(--space-4) var(--space-5);
+  }
+
+  /* --- Tekoča vsebina ---------------------------------------------------- */
+  /* --- Tekoče besedilo --------------------------------------------------- */
+  /* Razmiki morajo delovati ne glede na to, ali so odstavki neposredni otroci
+     .sp-prose ali zaviti v <section>. Prej je pravilo "> * + *" ujelo samo
+     sekcije, zato znotraj njih ni bilo nobenega razmika. */
+  .sp-prose {
+    /* Največja širina vrstice je na besedilnih elementih in ne na ovoju, zato
+       lahko tabela ali slika zasede celotno širino kontejnerja, odstavek pa
+       ostane dolg 68 znakov. */
+    font-size: var(--text-prose);
+    line-height: var(--leading-prose);
+    color: var(--text-reading);
+  }
+
+  .sp-prose > section > :where(p, ul, ol, h2, h3, h4, blockquote) { max-width: var(--measure); }
+  .sp-prose > :where(p, ul, ol, h2, h3, h4, blockquote) { max-width: var(--measure); }
+
+  /* V članku je stolpec sam po sebi ozek (720px), zato dodatna omejitev vrstice
+     ni potrebna — besedilo zapolni širino in tabela se z njim poravna. Na
+     storitvenih straneh, kjer je stolpec širok, omejitev ostane. */
+  .sp-prose--wide > section > :where(p, ul, ol, h2, h3, h4, blockquote),
+  .sp-prose--wide > :where(p, ul, ol, h2, h3, h4, blockquote) { max-width: none; }
+
+  .sp-prose > * + *,
+  .sp-prose > section > * + * { margin-block-start: var(--prose-gap); }
+
+  /* Prelom med sklopi: zrak gre nad naslov, ne pod njega, da naslov ostane
+     vizualno pripet na svoje besedilo. */
+  .sp-prose > section + section { margin-block-start: var(--prose-break); }
+  .sp-prose > * + h2            { margin-block-start: var(--prose-break); }
+
+  .sp-prose h2 { color: var(--text); }
+  .sp-prose h2 + * { margin-block-start: var(--prose-lead-gap); }
+  .sp-prose h3 { color: var(--text); margin-block-start: var(--space-10); }
+  .sp-prose h3 + * { margin-block-start: var(--space-4); }
+  .sp-prose > section > h2:first-child,
+  .sp-prose > section > h3:first-child { margin-block-start: 0; }
+
+  .sp-prose ul, .sp-prose ol {
+    list-style: none; padding: 0;
+    display: flex; flex-direction: column; gap: var(--space-3);
+  }
+  .sp-prose ul > li { padding-inline-start: var(--space-5); position: relative; }
+  .sp-prose ul > li::before {
+    content: "";
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0.72em;
+    width: 10px;
+    height: 2px;
+    background: var(--accent);
+  }
+  .sp-prose a { color: var(--link); text-decoration: underline; text-underline-offset: 0.18em; }
+  .sp-prose strong { font-weight: 600; color: var(--text); }
+}

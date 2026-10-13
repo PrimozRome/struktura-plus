@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "./fonts.css";
+@import "../../design-system/tokens.css";
+@import "../../design-system/theme.css";
+
+/* Družini sta definirani v fonts.css; tokens.css že nosi enake sklade. */
+
+/* Komponentni razredi iz design sistema. */
+@import "../../design-system/components.css";

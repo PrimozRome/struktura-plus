@@ -1,0 +1,242 @@
+/* ==========================================================================
+   Struktura Plus — design tokens
+   Vir barv: logotip (k-means ekstrakcija lesnih odtenkov, hue 24–35°)
+   Vsi kontrasti preverjeni po WCAG 2.1 AA. Opombe ob posameznih žetonih.
+   ========================================================================== */
+
+:root {
+  /* --- Les / primarna blagovna lestvica (hue ~28°) ---------------------- */
+  --les-50:  #FBF6F0;
+  --les-100: #F4E9DC;
+  --les-200: #E7D2B8;
+  --les-300: #D6B48C;
+  --les-400: #BE9161;
+  --les-500: #A2754D;   /* iz logotipa */
+  --les-600: #875D3A;   /* iz logotipa — 5.51:1 na svetli podlagi */
+  --les-700: #6E4628;   /* iz logotipa — 7.84:1 */
+  --les-800: #4F2D16;   /* iz logotipa — 11.72:1 */
+  --les-900: #38200F;
+  --les-950: #231309;
+
+  /* --- Pesek / topel nevtralni sistem (hue ~32°, nizka nasičenost) ------ */
+  --pesek-50:  #FCFAF7;
+  --pesek-100: #F6F1EA;
+  --pesek-200: #EBE3D8;
+  --pesek-300: #DAD0C2;
+  --pesek-400: #B6A896;
+  --pesek-500: #8C7E6B;
+  --pesek-600: #6B5E4E;   /* 6.04:1 — najmanjši za pomožno besedilo */
+  --pesek-700: #514738;
+  --pesek-800: #3A3227;
+  --pesek-900: #26201A;
+  --pesek-950: #17130F;
+
+  /* --- Cink / hladna konstrukcijska lestvica (kovinski deli, kleparstvo) - */
+  --cink-50:  #F5F7F8;
+  --cink-100: #E8ECEF;
+  --cink-200: #D3DADF;
+  --cink-300: #B0BBC3;
+  --cink-400: #7F8D97;
+  --cink-500: #5C6A74;
+  --cink-600: #47535C;
+  --cink-700: #3A444B;
+  --cink-800: #2B3237;
+  --cink-900: #1C2124;
+  --cink-950: #111416;
+
+  /* --- Jantar / edini poudarek ------------------------------------------ */
+  --jantar:        #C8801F;   /* dekorativno, velike ploskve, temna podlaga */
+  --jantar-strong: #9E5F11;   /* 4.92:1 — besedilo/ikone na svetli podlagi */
+  --jantar-soft:   #E0A24A;   /* 8.18:1 — na temni podlagi */
+  --jantar-ring:   #BC7518;   /* 3.54:1 — fokusni obroč na svetli podlagi */
+
+  /* --- Semantične barve -------------------------------------------------- */
+  --uspeh:     #2E7D52;
+  --opozorilo: #B45309;
+  --napaka:    #B3261E;
+
+  /* ======================================================================
+     Semantični žetoni — SVETLA TEMA (privzeta)
+     V komponentah uporabljaj SAMO te, nikoli lestvic zgoraj.
+     ====================================================================== */
+  /* Stran je svetla. Podlage so topli peščeni odtenki, ne bela — da je papir
+     videti kot les na soncu in ne kot pisarniški zaslon. Temne ploskve so
+     rezervirane za nogo in trak s pozivom. */
+  color-scheme: light;
+
+  --bg:            #FCF9F4;
+  --bg-subtle:     #F5EDE1;
+  --bg-muted:      #EFE6D8;
+  /* Podlaga za navigacijske trakove (drobtinice), ne za vsebinske razdelke.
+     Leži med --bg in --bg-subtle: dovolj, da se trak loči od strani pod njim
+     in od bele glave nad njim, premalo, da bi tekmoval z vsebino. */
+  --bg-bar:        #F8F3EB;
+  --bg-inverse:    var(--les-950);
+  --surface:       #FFFFFF;
+  --surface-raised:#FFFFFF;
+  /* Vgreznjena ploskev znotraj kartice (noga z podpisom). Za spoznanje
+     toplejša in temnejša od --surface, a svetlejša od --bg, da se loči od
+     telesa kartice, ne da bi delovala kot druga kartica. */
+  --surface-sunken:#FBF6F0;
+
+  --text:          var(--les-950);
+  --text-muted:    var(--pesek-600);
+  --text-subtle:   #736655;
+  --text-reading:  #2E241B;  /* daljša besedila — mehkejša od --text, a še vedno črnilo */
+  --text-inverse:  var(--pesek-50);
+
+  --border:        #E2D6C4;
+  --border-strong: #C5B49C;
+  --border-inverse:#3A2C21;
+
+  --primary:       var(--les-800);
+  --primary-hover: var(--les-900);
+  --primary-fg:    var(--pesek-50);
+  --primary-soft:  var(--les-100);
+
+  --accent:        var(--jantar);
+  --accent-text:   #8E540E;
+  --ring:          #A8680F;
+
+  --link:          var(--les-700);
+  --link-hover:    var(--les-900);
+
+  /* ======================================================================
+     Tipografija
+     ====================================================================== */
+  --font-display: "Lora", "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --font-body: "Archivo", "Helvetica Neue", Arial, system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Mono", Menlo, monospace;
+
+  --text-display-xl: clamp(2.5rem, 1.55rem + 4.2vw, 4.25rem);
+  --text-display-lg: clamp(2rem, 1.45rem + 2.6vw, 3.25rem);
+  --text-h2:         clamp(1.625rem, 1.35rem + 1.3vw, 2.25rem);
+  --text-h3:         clamp(1.25rem, 1.13rem + 0.6vw, 1.5rem);
+  --text-h4:         1.125rem;
+  --text-body-lg:    1.125rem;
+  --text-body:       1rem;
+  --text-body-sm:    0.9375rem;
+  --text-caption:    0.8125rem;
+  --text-eyebrow:    0.75rem;
+
+  --leading-tight:  1.06;
+  --leading-snug:   1.18;
+  --leading-normal: 1.45;
+  --leading-relaxed:1.7;
+
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-eyebrow:0.14em;
+
+  --measure: 68ch;          /* največja širina tekoče vsebine */
+
+  /* Tekoče besedilo na storitvenih in člankovnih straneh. Nekoliko večje od
+     osnovne pisave in z več vodilne črte — dolg odstavek se drugače bere kot
+     napis na gumbu. */
+  --text-prose:     1.0625rem;   /* 17px */
+  --leading-prose:  1.75;
+  --prose-gap:      1.5rem;      /* med odstavki */
+  --prose-lead-gap: 1.25rem;     /* med naslovom in prvim odstavkom */
+  --prose-break:    clamp(2.75rem, 5vw, 4rem); /* med sklopi, tj. nad H2 */
+
+  /* ======================================================================
+     Prostor — 4px osnova
+     ====================================================================== */
+  --space-1: 0.25rem;  --space-2: 0.5rem;   --space-3: 0.75rem;
+  --space-4: 1rem;     --space-5: 1.25rem;  --space-6: 1.5rem;
+  --space-8: 2rem;     --space-10: 2.5rem;  --space-12: 3rem;
+  --space-16: 4rem;    --space-20: 5rem;    --space-24: 6rem;
+  --space-32: 8rem;    --space-40: 10rem;
+
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --section-y: clamp(4rem, 8vw, 8rem);
+  /* Zgornji odmik naslovnega razdelka na straneh z drobtinicami. Trak z
+     drobtinicami že naredi ločnico pod glavo, zato polna višina razdelka
+     tam ni potrebna. */
+  --hero-y-top: clamp(2.25rem, 4.5vw, 4rem);
+  --container: 77.5rem;      /* 1240px */
+  --container-narrow: 46rem; /* 736px — ozki stolpec */
+  --container-article: 51rem; /* 816px — članki. Notranja širina je 720px, kar je
+                                 približno 74 znakov na vrstico: besedilo zapolni
+                                 stolpec, tabela s sedmimi stolpci pa gre noter
+                                 brez vodoravnega drsnika. */
+
+  /* ======================================================================
+     Oblika — namerno oglata geometrija (tesarski rez, ne zaobljeni gumbki)
+     ====================================================================== */
+  --radius-none: 0;
+  --radius-sm: 4px;    /* gumbi, vnosna polja */
+  --radius-md: 10px;   /* kartice (storitve, projekti, članki), slike */
+  --radius-lg: 14px;   /* modali, veliki paneli, cenovni blok */
+  --radius-pill: 999px;/* samo značke in filtri */
+
+  --border-width: 1px;
+  --border-width-strong: 2px;
+
+  /* ======================================================================
+     Sence — toplo obarvane, uporabljaj redko; raje rob kot senco
+     ====================================================================== */
+  --shadow-sm: 0 1px 2px rgba(35, 19, 9, 0.06);
+  --shadow-md: 0 2px 8px rgba(35, 19, 9, 0.08);
+  --shadow-lg: 0 10px 32px rgba(35, 19, 9, 0.10);
+  /* Dvig kartice ob prehodu z miško. Dvoslojna senca: ožja spodaj za stik s
+     podlago, širša za globino. Topel odtenek, ne nevtralno sivo. */
+  --shadow-lift: 0 14px 30px -10px rgba(35, 19, 9, 0.22),
+                 0 4px 10px -6px rgba(35, 19, 9, 0.14);
+
+  /* ======================================================================
+     Gibanje
+     ====================================================================== */
+  --ease: cubic-bezier(0.2, 0.6, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 220ms;
+  --duration-slow: 400ms;
+
+  --z-base: 0; --z-sticky: 100; --z-header: 200; --z-overlay: 300; --z-modal: 400;
+}
+
+/* ==========================================================================
+   TEMNA PALETA — NI AKTIVNA
+   Stran je namerno samo svetla: sistemske nastavitve ne preklopijo teme.
+   Paleta ostaja definirana, ker je uporabljena za nogo in trak s pozivom
+   prek --bg-inverse, in da jo je mogoče kasneje aktivirati brez novega dela.
+   Za aktivacijo: na <html> nastavi data-theme="dark" in v :root vrni
+   color-scheme: light dark.
+   ========================================================================== */
+:root[data-theme="dark"] {
+  --bg:            #1B1410;
+  --bg-subtle:     #241A14;
+  --bg-muted:      #2F231A;
+  --bg-bar:        #221A14;
+  --bg-inverse:    var(--pesek-100);
+  --surface:       #241A14;
+  --surface-raised:#2B1F17;
+  --surface-sunken:#1F1710;
+
+  --text:          var(--pesek-100);
+  --text-muted:    var(--pesek-400);
+  --text-subtle:   var(--pesek-500);
+  --text-inverse:  var(--les-950);
+
+  --border:        #3A2C21;
+  --border-strong: #4E3B2C;
+  --border-inverse:var(--pesek-300);
+
+  --primary:       var(--les-300);
+  --primary-hover: var(--les-200);
+  --primary-fg:    var(--les-950);
+  --primary-soft:  #33241A;
+
+  --accent:        var(--jantar-soft);
+  --accent-text:   var(--jantar-soft);
+  --ring:          var(--jantar-soft);
+
+  --link:          var(--les-300);
+  --link-hover:    var(--les-200);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 2px 10px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.5);
+}

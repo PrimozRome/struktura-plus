@@ -1,0 +1,19 @@
+node_modules
+.next
+out
+build
+.DS_Store
+*.pem
+.env*.local
+.vercel
+next-env.d.ts
+*.tsbuildinfo
+.raw-slike/
+.snap.tgz
+scripts/.manifest.json
+
+# Začasne kopije, ki čakajo na ročni izbris (Tailwind jih zato ne skenira).
+_za_izbris/
+
+# Osnutki logotipa in vizitk iz dela s Claudom — ne sodijo v repozitorij.
+Claude outputs/
