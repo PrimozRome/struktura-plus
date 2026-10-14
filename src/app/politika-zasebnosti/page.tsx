@@ -16,6 +16,10 @@ export const metadata = pageMeta({
  *    podatkov (DPA) — Resend jo ponuja — in ali standardne pogodbene klavzule držijo.
  * 2. Da poštni predal info@strukturaplus.si dejansko obstaja in ga nekdo bere.
  * 3. Da je ponudnik gostovanja res Vercel Inc.
+ * 4. V Google Analytics (Admin → Nastavitve podatkov → Hramba podatkov) nastavi rok
+ *    hrambe. Spodaj je zapisano "najdlje 14 mesecev".
+ * 5. Da so v Google Analytics oglaševalske funkcije (Google signals, deljenje podatkov
+ *    z oglasnimi storitvami) izklopljene — spodaj in v politiki piškotkov to trdimo.
  *
  * Besedilo je prevzeto s stare strani in uskladeno z dejansko izvedbo nove:
  * Google Fonts in EmailJS sta odpadla (pisave gostujejo lokalno, obrazec teče
@@ -96,8 +100,29 @@ export default function Page() {
         <p>
           Te podatke samodejno beleži naš ponudnik gostovanja v okviru standardnih strežniških
           dnevnikov. Sami jih ne zbiramo, ne povezujemo z drugimi podatki in ne analiziramo v
-          statistične ali tržne namene. Spletna stran ne uporablja piškotkov — podrobneje v{" "}
-          <Link href="/piskotki">politiki piškotkov</Link>.
+          statistične ali tržne namene.
+        </p>
+        <h3>Podatki o obisku, če privolite v merjenje</h3>
+        <p>
+          Ob prvem obisku vas vprašamo, ali smemo meriti obisk strani. Dokler ne privolite, se v vaš
+          brskalnik ne shrani noben piškotek in Googlu ne pošljemo nobenega zahtevka. Če privolite,
+          Google Analytics 4 zbere:
+        </p>
+        <ul>
+          <li>ogledane strani, čas obiska in zaporedje ogledov</li>
+          <li>vir obiska — iskalnik, povezava z druge strani ali neposreden vpis naslova</li>
+          <li>vrsto naprave, brskalnika in operacijskega sistema</li>
+          <li>približno lokacijo na ravni mesta ali regije</li>
+          <li>
+            naključni identifikator, shranjen v piškotkih <code>_ga</code> in{" "}
+            <code>_ga_6EJ63ZPCZK</code>
+          </li>
+        </ul>
+        <p>
+          Teh podatkov ne povezujemo z vašim imenom, e-pošto ali vsebino povpraševanja. Google
+          Analytics 4 vašega IP naslova ne shrani — uporabi ga samo za določitev približne lokacije
+          in ga nato zavrže. Oglaševalske funkcije so izklopljene. Privolitev lahko kadar koli
+          prekličete; kako, piše v <Link href="/piskotki">politiki piškotkov</Link>.
         </p>
       </section>
 
@@ -122,6 +147,13 @@ export default function Page() {
           stabilnosti in varnosti spletne strani ter za preprečevanje zlorab. Pravna podlaga je
           zakoniti interes upravljavca (člen 6(1)(f) GDPR).
         </p>
+        <h3>Merjenje obiska spletne strani</h3>
+        <p>
+          Če v to privolite, z Google Analytics merimo obisk strani, da vemo, katere vsebine so
+          obiskovalcem v pomoč in kje stran ne deluje dobro. Pravna podlaga je izključno vaša
+          privolitev (člen 6(1)(a) GDPR). Privolitev je prostovoljna — brez nje stran deluje
+          popolnoma enako — in jo lahko kadar koli prekličete.
+        </p>
         <p>
           Osebnih podatkov ne uporabljamo za neposredno trženje, profiliranje ali samodejno
           sprejemanje odločitev.
@@ -144,6 +176,11 @@ export default function Page() {
           <li>
             <strong>Strežniški dnevniki:</strong> kratek čas, določen s politiko ponudnika
             gostovanja, izključno za namene varnosti.
+          </li>
+          <li>
+            <strong>Podatki o obisku v Google Analytics:</strong> najdlje 14 mesecev od zadnjega
+            obiska, nato jih Google samodejno izbriše. Zbirna statistika brez vezave na
+            posameznega obiskovalca ostane tudi po tem roku.
           </li>
         </ul>
       </section>
@@ -168,14 +205,21 @@ export default function Page() {
             državo, prenos poteka na podlagi standardnih pogodbenih klavzul Evropske komisije.
           </li>
           <li>
+            <strong>Google (Google Ireland Limited, Irska):</strong> če privolite v merjenje obiska,
+            za nas obdeluje statistiko obiska spletne strani. Podatki se lahko prenesejo tudi družbi
+            Google LLC v Združene države; ta je vpisana v okvir EU–US Data Privacy Framework, prenos
+            pa dodatno pokrivajo standardne pogodbene klavzule Evropske komisije. Brez vaše
+            privolitve Googlu ne pošljemo ničesar.
+          </li>
+          <li>
             <strong>Računovodski servis:</strong> kadar je to potrebno za izpolnitev zakonskih
             obveznosti (računovodstvo, davčno poročanje).
           </li>
         </ul>
         <p>
-          Podatkov ne posredujemo oglaševalskim omrežjem in na strani ni nameščenih analitičnih
-          orodij. Pisave in slike se nalagajo z naše domene, zato se vaš IP naslov ob obisku ne
-          posreduje zunanjim ponudnikom vsebin.
+          Podatkov ne posredujemo oglaševalskim omrežjem in jih ne uporabljamo za oglaševanje.
+          Pisave in slike se nalagajo z naše domene, zato se vaš IP naslov ob obisku ne posreduje
+          zunanjim ponudnikom vsebin.
         </p>
       </section>
 
@@ -218,7 +262,8 @@ export default function Page() {
           <li>
             <strong>Preklic privolitve</strong> — kadar obdelava temelji na vaši privolitvi, jo
             lahko kadar koli prekličete, ne da bi to vplivalo na zakonitost obdelave pred
-            preklicem.
+            preklicem. Privolitev v merjenje obiska prekličete z gumbom v{" "}
+            <Link href="/piskotki">politiki piškotkov</Link>.
           </li>
         </ul>
         <p>
@@ -238,8 +283,9 @@ export default function Page() {
       <section>
         <h2>8. Piškotki</h2>
         <p>
-          Spletna stran ne uporablja piškotkov za sledenje, analitiko ali trženje. Podrobnosti so v{" "}
-          <Link href="/piskotki">politiki piškotkov</Link>.
+          Pred vašo privolitvijo stran ne shrani nobenega piškotka. Če privolite v merjenje obiska,
+          se shranita dva piškotka Google Analytics. Njun seznam in trajanje ter gumb za preklic
+          odločitve so v <Link href="/piskotki">politiki piškotkov</Link>.
         </p>
       </section>
 

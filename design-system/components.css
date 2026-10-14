@@ -314,4 +314,27 @@
   }
   .sp-prose a { color: var(--link); text-decoration: underline; text-underline-offset: 0.18em; }
   .sp-prose strong { font-weight: 600; color: var(--text); }
+
+  /* --- Pasica za soglasje ------------------------------------------------- */
+  /* Privzeto skrita. Pokaže jo skripta v Consent.tsx, ki na <html> postavi
+     data-soglasje="vprasaj"; ob odločitvi atribut zamenja za "odloceno".
+     Vidnost vodi koren in ne razred na pasici, da je React pri hidraciji ne
+     more povoziti. Ker je privzeto stanje skrito, obiskovalec, ki je že
+     odgovoril, pasice ne vidi niti za hip. */
+  .sp-soglasje {
+    display: none;
+    position: fixed;
+    inset-inline: 0;
+    bottom: 0;
+    /* Nad lepljivo glavo, ki ima --z-header (200). */
+    z-index: var(--z-overlay);
+    background: var(--bg-bar);
+    border-top: var(--border-width) solid var(--border-strong);
+    box-shadow: var(--shadow-lg);
+    padding-block: var(--space-5);
+    /* viewportFit: "cover" v layout.tsx pomeni, da stran sega pod domači
+       indikator na iPhonu — gumbi morajo ostati nad njim. */
+    padding-bottom: calc(var(--space-5) + env(safe-area-inset-bottom, 0px));
+  }
+  [data-soglasje="vprasaj"] .sp-soglasje { display: block; }
 }

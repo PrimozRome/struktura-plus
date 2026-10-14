@@ -149,7 +149,9 @@ export default function Page() {
       <section>
         <h2>7. Piškotki</h2>
         <p>
-          Spletna stran ne uporablja piškotkov za sledenje, analitiko ali trženje. Podrobnosti so v{" "}
+          Pred vašo privolitvijo stran ne shrani nobenega piškotka. Če privolite v merjenje
+          obiska, se shranita dva piškotka Google Analytics; oglaševalskih piškotkov ni.
+          Podrobnosti in gumb za preklic odločitve so v{" "}
           <Link href="/piskotki">politiki piškotkov</Link>.
         </p>
       </section>

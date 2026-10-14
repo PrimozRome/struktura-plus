@@ -233,12 +233,22 @@ obisku, je to nesorazmerno, zato jo odstranimo — glej `<metadata>` blok.
     Takrat je smiselno tudi preveriti pozicije za "lesene visoke grede" in
     "dvignjene grede" — to sta izraza, ki ju realno lahko dobimo; glavni izraz
     "visoke grede" držijo trgovine in ga ne ciljamo.
-13. **Analitika.** Ob namestitvi GA4 dopolni stran o piškotkih in dodaj pasico za soglasje.
-    Konverzijo veži na obisk `/hvala`. Dokler analitike ni, stran o piškotkih trdi, da
-    stran ne pošlje nobenega zahtevka na tuje strežnike — kar drži in je preverjeno
-    (sedem strani, vsi zahtevki na lastno domeno, nič piškotkov in nič `localStorage`).
-    Prva vgrajena zunanja vsebina — zemljevid, YouTube, pisave z Googla, pasica — to
-    trditev podre in besedilo je treba popraviti isti dan.
+13. **Analitika.** GA4 (`G-6EJ63ZPCZK`) je vgrajen — glej `src/lib/analitika.ts` in
+    `src/components/Consent.tsx`. Meri samo na produkciji; `next dev` in predogledi na
+    Vercelu so izključeni prek `VERCEL_ENV`. Skripta `gtag.js` se vstavi šele po kliku
+    na »Sprejmem«, zato pred privolitvijo na Google ne gre noben zahtevek. Pravna
+    besedila so usklajena (piškotki, zasebnost, splošni pogoji).
+    Pred objavo še:
+    - v GA pod Admin → Nastavitve podatkov → Hramba podatkov nastavi rok na 14 mesecev
+      (pravna besedila to trdijo);
+    - preveri, da so oglaševalske funkcije izklopljene (Google signals, deljenje z
+      oglasnimi storitvami) — tudi to trdimo;
+    - pod Admin → Tokovi podatkov → Izboljšano merjenje vklopi »Spremembe strani na
+      podlagi dogodkov zgodovine brskalnika«, sicer se pri navigaciji znotraj strani
+      (App Router ne osveži strani) šteje samo prvi ogled na sejo;
+    - konverzijo veži na obisk `/hvala`.
+    Vsaka naslednja vgrajena zunanja vsebina — zemljevid, YouTube, pisave z Googla —
+    zahteva novo vrstico v tabeli piškotkov in v pasici.
 
 ---
 

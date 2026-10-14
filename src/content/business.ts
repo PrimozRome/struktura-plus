@@ -59,7 +59,7 @@ export const business = {
  * Datum zadnje posodobitve pravnih besedil (piškotki, zasebnost, splošni pogoji).
  * En vir za vse tri strani — ob vsaki vsebinski spremembi ga je treba dvigniti.
  */
-export const legalUpdated = "2026-09-29";
+export const legalUpdated = "2026-10-13";
 
 /** "2026-09-22" → "22. september 2026" */
 export function formatSlovenianDate(iso: string): string {

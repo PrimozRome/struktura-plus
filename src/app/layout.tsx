@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { JsonLd } from "@/components/JsonLd";
 import { businessSchema, websiteSchema } from "@/lib/schema";
+import { ConsentBanner } from "@/components/Consent";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -66,6 +67,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <main id="vsebina" tabIndex={-1}>{children}</main>
         <Footer />
         <JsonLd data={[businessSchema(), websiteSchema()]} />
+        <ConsentBanner />
       </body>
     </html>
   );
