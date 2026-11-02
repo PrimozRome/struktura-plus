@@ -25,12 +25,14 @@ IZPUŠČENO NAMENOMA: kovinski-nadstreski-5, -7 in -9 so 3D vizualizacije
 GROUPS = {
   # --- Terase ---------------------------------------------------------------
   "lesene-terase": [
-    ("lesene-terase-hero", "Velika lesena terasa s poševno položenimi deskami ob zastekljeni hiši"),
-    ("lesene-terase-15",   "Lesena terasa z vrtno mizo in stoli ob zastekljeni fasadi"),
-    ("lesene-terase-14",   "L-oblikovana lesena terasa ob sivi hiši s prodnatim robom"),
+    ("lesene-terase-17",   "Velika lesena terasa ob hiši z razgledom na griče"),
     ("lesene-terase-23",   "Nova lesena terasa pred hišo z zelenimi polkni"),
-    ("lesene-terase-17",   "Velika svetla terasa ob hiši z razgledom na griče"),
     ("lesene-terase-5",    "Široka lesena terasa na nastavljivih podstavkih pred leseno hišo"),
+    # ⚠️ Isti objekt kot wpc-terase-32 in -33 (prej lesene-terase-14 in -15), ki
+    #    sta bila prepoznana kot WPC — ista siva hiša, isti jekleni steber, isti
+    #    poševni vzorec desk. Material tega posnetka torej ni potrjen, zato alt
+    #    ne trdi, da je terasa lesena. Čaka na odločitev naročnika.
+    ("lesene-terase-hero", "Velika terasa s poševno položenimi deskami ob zastekljeni hiši"),
     ("lesene-terase-24",   "Terasa ob hiši z vrtno mizo in kamnitim žarom"),
     ("lesene-terase-2",    "Pokrita lesena terasa z lesenim stebrom in razgledom na hribe"),
     ("lesene-terase-7",    "Ozka lesena terasa ob hiši s travnato površino"),
@@ -42,12 +44,14 @@ GROUPS = {
     ("lesene-terase-11",   "Pot iz plošč in lesa ob robu lesene terase"),
     ("lesene-terase-6",    "Polaganje terasnih desk ob hiši"),
     ("lesene-terase-20",   "Dvignjena terasna ploščad med polaganjem desk"),
-    ("lesene-terase-8",    "Aluminijasta podkonstrukcija terase na nastavljivih podstavkih"),
     ("lesene-terase-19",   "Leseni nosilci podkonstrukcije terase na pobočju"),
     ("lesene-terase-21",   "Podkonstrukcija dvignjene terase pod zaščitno folijo"),
   ],
   "wpc-terase": [
     ("wpc-terase-hero", "WPC terasa ob hiši z visokimi gredami in prodnatim pasom"),
+    # Prestavljeni iz lesene-terase: naročnik je potrdil, da gre za WPC.
+    ("wpc-terase-33",   "WPC terasa z vrtno mizo in stoli ob zastekljeni fasadi"),
+    ("wpc-terase-32",   "L-oblikovana WPC terasa ob sivi hiši s prodnatim robom"),
     ("wpc-terase-25",   "Opremljena WPC terasa z jedilno mizo in sedežno garnituro"),
     ("wpc-terase-17",   "Bazenska obloga iz WPC desk z vgrajenimi stopnicami"),
     ("wpc-terase-19",   "L-oblikovana WPC terasa s stopnico pred temno obloženo hišo"),

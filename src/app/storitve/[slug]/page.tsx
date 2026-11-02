@@ -50,7 +50,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     { name: "Storitve", path: "/storitve" },
     { name: service.navLabel, path },
   ];
-  const slike = galerija(service.slug, 6);
+  const slike = galerija(service.slug);
   const mnenja = testimonialsFor(service.slug);
   const nasveti = articlesForService(service.slug);
   const related = service.related

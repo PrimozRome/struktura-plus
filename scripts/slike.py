@@ -88,9 +88,10 @@ export function heroFoto(slug: string): Foto | undefined {
   return foto[slug]?.[0];
 }
 
-/** Fotografije za galerijo — vse razen glavne. */
-export function galerija(slug: string, koliko = 6): Foto[] {
-  return (foto[slug] ?? []).slice(1, 1 + koliko);
+/** Fotografije za galerijo — vse razen glavne. Brez `koliko` vrne vse. */
+export function galerija(slug: string, koliko?: number): Foto[] {
+  const vse = (foto[slug] ?? []).slice(1);
+  return koliko === undefined ? vse : vse.slice(0, koliko);
 }
 
 /** Splošne fotografije za pristajalno stran in "O nas". */

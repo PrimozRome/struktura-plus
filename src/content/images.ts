@@ -19,12 +19,10 @@ export type Foto = {
 
 export const foto: Record<string, Foto[]> = {
   "lesene-terase": [
-    { base: "/slike/lesene-terase/lesene-terase-hero", w: 1600, h: 1202, widths: [400, 800, 1200, 1600], alt: "Velika lesena terasa s poševno položenimi deskami ob zastekljeni hiši" },
-    { base: "/slike/lesene-terase/lesene-terase-15", w: 1600, h: 1202, widths: [400, 800, 1200, 1600], alt: "Lesena terasa z vrtno mizo in stoli ob zastekljeni fasadi" },
-    { base: "/slike/lesene-terase/lesene-terase-14", w: 1600, h: 1202, widths: [400, 800, 1200, 1600], alt: "L-oblikovana lesena terasa ob sivi hiši s prodnatim robom" },
+    { base: "/slike/lesene-terase/lesene-terase-17", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Velika lesena terasa ob hiši z razgledom na griče" },
     { base: "/slike/lesene-terase/lesene-terase-23", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Nova lesena terasa pred hišo z zelenimi polkni" },
-    { base: "/slike/lesene-terase/lesene-terase-17", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Velika svetla terasa ob hiši z razgledom na griče" },
     { base: "/slike/lesene-terase/lesene-terase-5", w: 1600, h: 720, widths: [400, 800, 1200, 1600], alt: "Široka lesena terasa na nastavljivih podstavkih pred leseno hišo" },
+    { base: "/slike/lesene-terase/lesene-terase-hero", w: 1600, h: 1202, widths: [400, 800, 1200, 1600], alt: "Velika terasa s poševno položenimi deskami ob zastekljeni hiši" },
     { base: "/slike/lesene-terase/lesene-terase-24", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Terasa ob hiši z vrtno mizo in kamnitim žarom" },
     { base: "/slike/lesene-terase/lesene-terase-2", w: 901, h: 1600, widths: [400, 800, 901], alt: "Pokrita lesena terasa z lesenim stebrom in razgledom na hribe" },
     { base: "/slike/lesene-terase/lesene-terase-7", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Ozka lesena terasa ob hiši s travnato površino" },
@@ -36,12 +34,13 @@ export const foto: Record<string, Foto[]> = {
     { base: "/slike/lesene-terase/lesene-terase-11", w: 1600, h: 2133, widths: [400, 800, 1200, 1600], alt: "Pot iz plošč in lesa ob robu lesene terase" },
     { base: "/slike/lesene-terase/lesene-terase-6", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Polaganje terasnih desk ob hiši" },
     { base: "/slike/lesene-terase/lesene-terase-20", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Dvignjena terasna ploščad med polaganjem desk" },
-    { base: "/slike/lesene-terase/lesene-terase-8", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Aluminijasta podkonstrukcija terase na nastavljivih podstavkih" },
     { base: "/slike/lesene-terase/lesene-terase-19", w: 1600, h: 1202, widths: [400, 800, 1200, 1600], alt: "Leseni nosilci podkonstrukcije terase na pobočju" },
     { base: "/slike/lesene-terase/lesene-terase-21", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Podkonstrukcija dvignjene terase pod zaščitno folijo" },
   ],
   "wpc-terase": [
     { base: "/slike/wpc-terase/wpc-terase-hero", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "WPC terasa ob hiši z visokimi gredami in prodnatim pasom" },
+    { base: "/slike/wpc-terase/wpc-terase-33", w: 1600, h: 1202, widths: [400, 800, 1200, 1600], alt: "WPC terasa z vrtno mizo in stoli ob zastekljeni fasadi" },
+    { base: "/slike/wpc-terase/wpc-terase-32", w: 1600, h: 1202, widths: [400, 800, 1200, 1600], alt: "L-oblikovana WPC terasa ob sivi hiši s prodnatim robom" },
     { base: "/slike/wpc-terase/wpc-terase-25", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Opremljena WPC terasa z jedilno mizo in sedežno garnituro" },
     { base: "/slike/wpc-terase/wpc-terase-17", w: 1600, h: 1082, widths: [400, 800, 1200, 1600], alt: "Bazenska obloga iz WPC desk z vgrajenimi stopnicami" },
     { base: "/slike/wpc-terase/wpc-terase-19", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "L-oblikovana WPC terasa s stopnico pred temno obloženo hišo" },
@@ -237,9 +236,10 @@ export function heroFoto(slug: string): Foto | undefined {
   return foto[slug]?.[0];
 }
 
-/** Fotografije za galerijo — vse razen glavne. */
-export function galerija(slug: string, koliko = 6): Foto[] {
-  return (foto[slug] ?? []).slice(1, 1 + koliko);
+/** Fotografije za galerijo — vse razen glavne. Brez `koliko` vrne vse. */
+export function galerija(slug: string, koliko?: number): Foto[] {
+  const vse = (foto[slug] ?? []).slice(1);
+  return koliko === undefined ? vse : vse.slice(0, koliko);
 }
 
 /** Splošne fotografije za pristajalno stran in "O nas". */

@@ -25,6 +25,10 @@ const crumbs = [
 const druzina = fotoPoImenu("o-nas", "o-nas-druzina");
 const marko = fotoPoImenu("o-nas", "o-nas-marko");
 const montaza = fotoPoImenu("o-nas", "o-nas-montaza");
+// Posnetek montaže ostrešja je v skupini krovstvo-kleparstvo — skupina
+// "o-nas" svojega nima. fotoPoImenu zna seči v katero koli skupino, zato
+// slike ni treba podvajati na disku.
+const ostresje = fotoPoImenu("krovstvo-kleparstvo", "krovstvo-kleparstvo-13");
 
 /**
  * Stran je napisana v prvi osebi in namerno ni "korporativna" — je Markova
@@ -85,6 +89,16 @@ export default function ONasPage() {
                 najprej pogledam, kam bo objekt obrnjen, koliko sonca bo dobival in kod bo tekla
                 voda. Šele potem se pogovarjava o deskah.
               </p>
+              {/* Slika zaključuje to sekcijo. Postavitev na konec sekcije je
+                  hkrati razmik: --prose-gap nad njo, --prose-break pod njo.
+                  Razmerje 4/3 je najbližje izvirniku (1204×968), zato obrez
+                  odvzame najmanj — pri širšem bi odrezalo monterja. */}
+              <Figure
+                foto={ostresje}
+                alt="Dva monterja na novem lesenem ostrešju med polaganjem izolacijskih plošč"
+                ratio="4/3"
+                sizes="(max-width: 768px) 100vw, 720px"
+              />
             </section>
 
             <section>
