@@ -3,7 +3,7 @@ import type { Service } from "../types";
 export const vrtneLopeUteHiske: Service = {
   slug: "vrtne-lope-ute-hiske",
   navLabel: "Vrtne lope in ute",
-  order: 14,
+  order: 16,
   tier: "full",
   eyebrow: "Vrtni objekti",
   metaTitle: "Vrtne lope, ute in hiške po meri — iz lesa",

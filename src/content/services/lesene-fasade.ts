@@ -6,9 +6,9 @@ export const leseneFasade: Service = {
   order: 5,
   tier: "full",
   eyebrow: "Fasade",
-  metaTitle: "Lesene fasade po meri — sibirski macesen, termoles, WPC",
+  metaTitle: "Lesene fasade po meri — macesen in termoles",
   metaDescription:
-    "Lesene fasade po meri: prezračevana konstrukcija, sibirski macesen, termoobdelan les in WPC. Montaža brez toplotnih mostov, obnova obstoječe fasade.",
+    "Lesene fasade po meri: prezračevana konstrukcija, sibirski macesen in termoobdelan les. Montaža brez toplotnih mostov, obnova obstoječe fasade.",
   h1: "Lesene fasade po meri",
   lead:
     "Lesene fasade izdelujemo in montiramo po meri objekta. Lesena fasada ni samo videz — je prezračevana konstrukcija, ki steno ščiti pred dežjem in ji hkrati pusti dihati. Če je izvedena pravilno, zdrži desetletja skoraj brez vzdrževanja; če reža za zrak manjka, se vlaga ujame med izolacijo in oblogo.",
@@ -17,7 +17,6 @@ export const leseneFasade: Service = {
     "lesena fasada",
     "lesene fasadne obloge",
     "prezračevana fasada",
-    "wpc fasada",
     "macesnova fasada",
     "lesena fasada macesen",
     "lesena fasada smreka",
@@ -26,7 +25,7 @@ export const leseneFasade: Service = {
     "cena lesene fasade",
     "obnova lesene fasade",
   ],
-  cardText: "Prezračevane fasade iz sibirskega macesna, termolesa in WPC. Tudi obnove.",
+  cardText: "Prezračevane fasade iz sibirskega macesna in termolesa. Tudi obnove.",
   cardPrice: "75–140 €/m²",
   sections: [
     {
@@ -136,11 +135,10 @@ export const leseneFasade: Service = {
     "Lesena prezračevana fasada",
     "Fasadne obloge iz sibirskega macesna",
     "Termoobdelan les za fasado",
-    "WPC fasadne obloge",
     "Obnova obstoječe lesene fasade",
   ],
   woods: ["Sibirski macesen", "Termoobdelan les", "Smreka", "WPC kompozit"],
-  related: ["leseni-stropi-opazi", "lesene-terase", "krovstvo-kleparstvo"],
+  related: ["wpc-fasade", "leseni-stropi-opazi", "krovstvo-kleparstvo"],
   heroAlt:
     "Prezračevana lesena fasada iz sibirskega macesna z rombnim profilom — izvedba Struktura Plus",
 };

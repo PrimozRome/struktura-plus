@@ -3,7 +3,7 @@ import type { Service } from "../types";
 export const balkonskeOgraje: Service = {
   slug: "balkonske-ograje",
   navLabel: "Balkonske ograje",
-  order: 8,
+  order: 9,
   tier: "full",
   eyebrow: "Ograje",
   metaTitle: "Balkonske ograje po meri — lesene in WPC",
@@ -128,7 +128,7 @@ export const balkonskeOgraje: Service = {
     "Zamenjava polnila na obstoječem ogrodju",
   ],
   woods: ["Sibirski macesen", "Termoobdelan les", "WPC kompozit"],
-  related: ["lesene-ograje", "lesene-terase", "lesene-stopnice"],
+  related: ["lesene-ograje", "wpc-ograje", "stopnice"],
   heroAlt:
     "Lesena balkonska ograja z navpičnimi lamelami iz sibirskega macesna — izvedba Struktura Plus",
 };

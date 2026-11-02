@@ -10,6 +10,8 @@ import { vrtneLopeUteHiske } from "./services/vrtne-lope-ute-hiske";
 import { lesenePergole } from "./services/lesene-pergole";
 import { leseniStropiOpazi } from "./services/leseni-stropi-opazi";
 import { wpcTerase } from "./services/wpc-terase";
+import { wpcOgraje } from "./services/wpc-ograje";
+import { wpcFasade } from "./services/wpc-fasade";
 import { stopnice } from "./services/stopnice";
 import { visokeGrede } from "./services/visoke-grede";
 import { ravneStreheEpdm } from "./services/ravne-strehe-epdm";
@@ -27,6 +29,8 @@ export const services: Service[] = [
   lesenePergole,
   leseniStropiOpazi,
   wpcTerase,
+  wpcOgraje,
+  wpcFasade,
   stopnice,
   visokeGrede,
   ravneStreheEpdm,

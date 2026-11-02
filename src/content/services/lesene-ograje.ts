@@ -3,21 +3,19 @@ import type { Service } from "../types";
 export const leseneOgraje: Service = {
   slug: "lesene-ograje",
   navLabel: "Lesene ograje",
-  order: 7,
+  order: 8,
   tier: "full",
   eyebrow: "Ograje",
-  metaTitle: "Lesene in WPC ograje po meri — vrtne in pregradne",
+  metaTitle: "Lesene ograje po meri — vrtne in pregradne",
   metaDescription:
-    "Lesene in WPC ograje po meri: vrtne, dvoriščne, lamelne in pregradne stene za zasebnost. Temeljenje, montaža in cena na tekoči meter. Izvedba po vsej Sloveniji.",
-  h1: "Lesene in WPC ograje po meri",
+    "Lesene ograje po meri: vrtne, dvoriščne, lamelne in pregradne stene za zasebnost. Temeljenje, montaža in cena na tekoči meter. Izvedba po vsej Sloveniji.",
+  h1: "Lesene ograje po meri",
   lead:
-    "Lesene in WPC ograje izdelujemo in montiramo po meri. Ograjo naredimo tako, da stoji ravno tudi čez deset let. To ni vprašanje desk, ampak temeljenja in razmika med stebri — pri tem se najpogosteje varčuje in prav tam se ograja najprej nagne.",
+    "Lesene ograje izdelujemo in montiramo po meri. Ograjo naredimo tako, da stoji ravno tudi čez deset let. To ni vprašanje desk, ampak temeljenja in razmika med stebri — pri tem se najpogosteje varčuje in prav tam se ograja najprej nagne.",
   primaryKeyword: "lesena ograja",
   secondaryKeywords: [
     "lesene ograje",
     "vrtne ograje",
-    "wpc ograje",
-    "wpc deske za ograjo",
     "zunanje ograje",
     "zunanje vrtne ograje",
     "lamelne ograje",
@@ -29,7 +27,6 @@ export const leseneOgraje: Service = {
     "cena ograje na meter",
     "cena lesene ograje",
     "izdelava lesene vrtne ograje",
-    "ograja iz wpc desk",
   ],
   cardText: "Vrtne in dvoriščne ograje, lamelne izvedbe in pregradne stene za zasebnost.",
   cardPrice: "70–150 €/tm",
@@ -122,13 +119,12 @@ export const leseneOgraje: Service = {
   ],
   offers: [
     "Lesena vrtna ograja",
-    "WPC ograja",
     "Lamelna ograja",
     "Pregradna stena za zasebnost",
     "Vrtna in dvoriščna vrata",
   ],
   woods: ["Sibirski macesen", "Smreka", "WPC kompozit"],
-  related: ["balkonske-ograje", "stopnice", "lesene-terase"],
+  related: ["wpc-ograje", "balkonske-ograje", "lesene-terase"],
   heroAlt:
     "Lesena lamelna ograja iz sibirskega macesna okoli dvorišča družinske hiše — izvedba Struktura Plus",
 };

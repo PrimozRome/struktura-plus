@@ -3,7 +3,7 @@ import type { Service } from "../types";
 export const wpcTerase: Service = {
   slug: "wpc-terase",
   navLabel: "WPC terase",
-  order: 9,
+  order: 11,
   tier: "basic",
   eyebrow: "Terase",
   metaTitle: "WPC terase — montaža in cena",
@@ -98,6 +98,6 @@ export const wpcTerase: Service = {
   ],
   offers: ["WPC terasa", "WPC obroba in stopnice", "Zamenjava lesene terase z WPC"],
   woods: ["WPC kompozit"],
-  related: ["lesene-terase", "lesene-ograje", "lesene-fasade"],
+  related: ["lesene-terase", "wpc-ograje", "wpc-fasade"],
   heroAlt: "WPC terasa s kompozitnimi deskami in aluminijasto podkonstrukcijo — izvedba Struktura Plus",
 };

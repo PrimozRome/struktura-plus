@@ -34,7 +34,7 @@ import type { Service } from "../types";
 export const visokeGrede: Service = {
   slug: "visoke-grede",
   navLabel: "Visoke grede",
-  order: 13,
+  order: 15,
   tier: "full",
   eyebrow: "Visoke grede",
   metaTitle: "Lesene visoke grede po meri — izdelava, dostava in montaža",

@@ -2,7 +2,7 @@
 """
 Predelava fotografij za spletno stran.
 
-Vhod:  .raw-slike/<ime>.jpg   (izvirniki)
+Vhod:  .raw-slike/<ime>.jpg   (izvirniki, pomanjšani na 1600 px)
 Izhod: public/slike/<skupina>/<ime>-<sirina>.avif|.webp
        src/content/images.ts  (manifest z merami in alt besedili)
 
@@ -57,9 +57,10 @@ def process(group, entries):
 TS_HEAD = '''// SAMODEJNO USTVARJENO — ne urejaj ročno.
 // Vir: scripts/slike.py + scripts/mapiranje.py (zaženi `python3 scripts/slike.py`).
 //
-// Fotografije so prevzete s prejšnje strani strukturaplus.si. Večina je bila
-// tam že pomanjšana in obrezana, zato so razmerja neenotna — postavitev jih
-// obreže z object-fit: cover, mere pa so tu zapisane, da ni premika postavitve.
+// Vir: fotografije naročnika iz oktobra 2026. Razmerja so neenotna (posnetki
+// s telefona, pokončni in ležeči) — postavitev jih obreže z object-fit: cover,
+// mere pa so tu zapisane, da ob nalaganju ni premika postavitve.
+// Izjema sta skupini "o-nas" in "splosno", ki sta še s prejšnje strani.
 
 export type Foto = {
   /** pot brez širine in končnice, npr. "/slike/lesene-terase/terase-12" */

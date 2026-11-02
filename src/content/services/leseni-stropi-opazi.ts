@@ -3,7 +3,7 @@ import type { Service } from "../types";
 export const leseniStropiOpazi: Service = {
   slug: "leseni-stropi-opazi",
   navLabel: "Stropi in opaži",
-  order: 12,
+  order: 14,
   tier: "basic",
   eyebrow: "Notranjost",
   metaTitle: "Leseni stropi in opaži — notranje obloge po meri",

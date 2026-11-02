@@ -3,7 +3,7 @@ import type { Service } from "../types";
 export const stopnice: Service = {
   slug: "stopnice",
   navLabel: "Stopnice",
-  order: 10,
+  order: 12,
   tier: "full",
   eyebrow: "Stopnice",
   metaTitle: "Lesene in kovinske stopnice po meri — notranje in zunanje",
@@ -164,6 +164,8 @@ export const stopnice: Service = {
   ],
   woods: ["Hrast", "Jesen", "Bukev", "Sibirski macesen"],
   related: ["leseni-stropi-opazi", "lesene-ograje", "balkonske-ograje"],
-  heroAlt:
-    "Lesene notranje stopnice s kovinsko tetivo in hrastovimi nastopnimi ploskvami — izvedba Struktura Plus",
+  // ZAČASNO: dokler ni posnetkov lesenih stopnic, je naslovna fotografija
+  // zunanja WPC izvedba. Alt mora opisovati, kar je na sliki, ne tega, kar bi
+  // si na strani želeli — sicer zavaja bralca z bralnikom in Google.
+  heroAlt: "Zunanje stopnice iz WPC desk ob hiši — izvedba Struktura Plus",
 };

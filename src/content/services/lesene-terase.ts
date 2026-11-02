@@ -3,7 +3,7 @@ import type { Service } from "../types";
 export const leseneTerase: Service = {
   slug: "lesene-terase",
   navLabel: "Lesene terase",
-  order: 6,
+  order: 7,
   tier: "full",
   eyebrow: "Terase",
   metaTitle: "Lesene terase po meri — macesen, cumaru, ipe",

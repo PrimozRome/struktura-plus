@@ -3,7 +3,7 @@ import type { Service } from "../types";
 export const krovstvoKleparstvo: Service = {
   slug: "krovstvo-kleparstvo",
   navLabel: "Krovstvo in kleparstvo",
-  order: 15,
+  order: 17,
   tier: "basic",
   eyebrow: "Strehe",
   metaTitle: "Krovstvo in kleparstvo — strehe, obrobe, žlebovi",

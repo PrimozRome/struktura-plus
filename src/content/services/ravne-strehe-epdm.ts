@@ -3,7 +3,7 @@ import type { Service } from "../types";
 export const ravneStreheEpdm: Service = {
   slug: "ravne-strehe-epdm",
   navLabel: "Ravne strehe EPDM",
-  order: 11,
+  order: 13,
   tier: "basic",
   eyebrow: "Strehe",
   metaTitle: "Ravne strehe z EPDM membrano — montaža in prenova",
