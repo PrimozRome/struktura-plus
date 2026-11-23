@@ -165,6 +165,10 @@ GROUPS = {
     ("lesene-fasade-28",   "Vogal hiše s temno letveno oblogo pod napuščem"),
     ("lesene-fasade-30",   "Temna letvena obloga ob oknu na ometani fasadi"),
     ("lesene-fasade-26",   "Svetla fasadna obloga in terasne deske v istem tonu"),
+    # Montaža fasade na gozdnem objektu, oktober 2026. Posnetka sta točno 4/3,
+    # kolikor je razmerje galerije, zato ju obrez ne odreže.
+    ("lesene-fasade-montaza-3", "Navpična lesena fasada na objektu v gozdu med montažo, desno še neobložena stena z vetrno zaporo in letvami"),
+    ("lesene-fasade-montaza-5", "Pokrita terasa lesenega objekta med gradnjo, vgrajena vrata in okno ter delno obložena stena"),
   ],
   "wpc-fasade": [
     ("wpc-fasade-hero", "Rjava WPC fasadna obloga na nadstropju s trakastim oknom"),

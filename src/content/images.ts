@@ -146,6 +146,8 @@ export const foto: Record<string, Foto[]> = {
     { base: "/slike/lesene-fasade/lesene-fasade-28", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Vogal hiše s temno letveno oblogo pod napuščem" },
     { base: "/slike/lesene-fasade/lesene-fasade-30", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Temna letvena obloga ob oknu na ometani fasadi" },
     { base: "/slike/lesene-fasade/lesene-fasade-26", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Svetla fasadna obloga in terasne deske v istem tonu" },
+    { base: "/slike/lesene-fasade/lesene-fasade-montaza-3", w: 2576, h: 1932, widths: [400, 800, 1200, 1600], alt: "Navpična lesena fasada na objektu v gozdu med montažo, desno še neobložena stena z vetrno zaporo in letvami" },
+    { base: "/slike/lesene-fasade/lesene-fasade-montaza-5", w: 2576, h: 1932, widths: [400, 800, 1200, 1600], alt: "Pokrita terasa lesenega objekta med gradnjo, vgrajena vrata in okno ter delno obložena stena" },
   ],
   "wpc-fasade": [
     { base: "/slike/wpc-fasade/wpc-fasade-hero", w: 849, h: 703, widths: [400, 800, 849], alt: "Rjava WPC fasadna obloga na nadstropju s trakastim oknom" },
