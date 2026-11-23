@@ -13,7 +13,7 @@ import { Container, Section } from "@/components/Container";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Faq } from "@/components/Faq";
 import { CtaBand } from "@/components/CtaBand";
-import { ServiceCard } from "@/components/ServiceCard";
+import { ServiceCard, SERVICE_CARD_SIZES_OZKO } from "@/components/ServiceCard";
 import { Figure } from "@/components/Figure";
 import { foto, fotoPoImenu } from "@/content/images";
 
@@ -143,7 +143,7 @@ export default async function NasvetPage({ params }: { params: Promise<{ slug: s
               alt={cover.alt}
               ratio="21/9"
               priority
-              sizes="(max-width: 928px) 100vw, 928px"
+              sizes="(max-width: 816px) 92vw, 740px"
               className="mt-10"
             />
           )}
@@ -225,7 +225,7 @@ export default async function NasvetPage({ params }: { params: Promise<{ slug: s
             <h2 className="!text-[24px]">Povezane storitve</h2>
             <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
               {related.map((s) => (
-                <ServiceCard key={s.slug} service={s} />
+                <ServiceCard key={s.slug} service={s} sizes={SERVICE_CARD_SIZES_OZKO} />
               ))}
             </div>
           </Container>

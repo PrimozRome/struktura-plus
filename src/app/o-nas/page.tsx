@@ -71,7 +71,7 @@ export default function ONasPage() {
               alt="Ilustracija družine na sprehodu po poti med gozdom in travniki proti sončnemu zahodu"
               ratio="3/2"
               priority
-              sizes="(max-width: 1024px) 100vw, 46vw"
+              sizes="(max-width: 1023px) 92vw, (max-width: 1240px) 46vw, 540px"
             />
           </div>
         </Container>
@@ -103,7 +103,7 @@ export default function ONasPage() {
                 foto={ostresje}
                 alt="Dva monterja na novem lesenem ostrešju med polaganjem izolacijskih plošč"
                 ratio="4/3"
-                sizes="(max-width: 768px) 100vw, 720px"
+                sizes="(max-width: 768px) 92vw, 720px"
               />
             </section>
 
@@ -129,7 +129,7 @@ export default function ONasPage() {
                 foto={markoNaDelu}
                 alt="Marko Pogorevc med gradnjo lesene hiške v gozdu: levo pri pregledu konstrukcije, desno pri vijačenju strešnih letev"
                 ratio="3/2"
-                sizes="(max-width: 768px) 100vw, 720px"
+                sizes="(max-width: 768px) 92vw, 720px"
               />
             </section>
 
@@ -159,13 +159,13 @@ export default function ONasPage() {
                   foto={marko}
                   alt="Marko Pogorevc z akumulatorskim vijačnikom med montažo lesenega objekta"
                   ratio="3/4"
-                  sizes="(max-width: 640px) 100vw, 27vw"
+                  sizes="(max-width: 639px) 92vw, (max-width: 816px) 45vw, 360px"
                 />
                 <Figure
                   foto={montaza}
                   alt="Postavljanje sten lesene hiške v gozdu, dva monterja pri delu"
                   ratio="3/4"
-                  sizes="(max-width: 640px) 100vw, 27vw"
+                  sizes="(max-width: 639px) 92vw, (max-width: 816px) 45vw, 360px"
                 />
               </div>
               <p className="mt-4 text-[15px] text-[var(--text-subtle)]">

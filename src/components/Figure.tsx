@@ -28,7 +28,11 @@ export function Figure({
   alt,
   ratio = "4/3",
   priority = false,
-  sizes = "(max-width: 768px) 100vw, 33vw",
+  /* Privzetek ustreza trostolpčni mreži v polnem vsebniku. Odstotek širine
+     okna nad --container (1240 px) pretirava, ker je vsebnik tam že omejen,
+     zato je zadnja vrednost fiksna. Klicatelj naj jo prepiše, če je stolpec
+     drugačen — glej meritev v scripts/ oziroma komentarje ob klicih. */
+  sizes = "(max-width: 639px) 92vw, (max-width: 1023px) calc(46vw - 20px), (max-width: 1240px) 30vw, 352px",
   className,
   rounded = true,
 }: {

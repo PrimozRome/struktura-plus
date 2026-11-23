@@ -252,15 +252,5 @@ GROUPS = {
     ("o-nas-marko-na-delu", "Marko Pogorevc med gradnjo lesene hiške v gozdu"),
     ("o-nas-marko",   "Marko Pogorevc pri montaži lesenega objekta"),
     ("o-nas-montaza", "Postavljanje sten lesenega objekta v gozdu"),
-    ("o-nas-druzina", "Marko Pogorevc z družino"),
-  ],
-  "splosno": [
-    ("notranja-oprema-1", "Masivna postelja po meri iz lesa"),
-    ("notranja-oprema-4", "Lesena jedilna miza po naročilu"),
-    ("notranja-oprema-7", "Lesene omare po meri"),
-    ("notranja-oprema-3", "Police iz masivnega lesa po meri"),
-    ("notranja-oprema-9", "Masivni leseni elementi po meri"),
-    ("notranja-oprema-6", "Detajl masivnega lesa — površinska obdelava"),
-    ("objekti-prizidki-3", "Objekt z leseno fasado po meri"),
   ],
 }

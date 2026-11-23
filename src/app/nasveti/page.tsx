@@ -5,7 +5,12 @@ import { JsonLd } from "@/components/JsonLd";
 import { Container, Section } from "@/components/Container";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { CtaBand } from "@/components/CtaBand";
-import { ArticleCardLarge, ArticleCardSmall } from "@/components/ArticleCard";
+import {
+  ArticleCardLarge,
+  ArticleCardSmall,
+  CARD_SIZES_3,
+  CARD_SIZES_4,
+} from "@/components/ArticleCard";
 
 export const metadata = pageMeta({
   title: "Nasveti — les, dovoljenja, cene in vzdrževanje",
@@ -63,7 +68,12 @@ export default function NasvetiPage() {
             }
           >
             {pinned.map((a, i) => (
-              <ArticleCardLarge key={a.slug} a={a} priority={i === 0} />
+              <ArticleCardLarge
+                key={a.slug}
+                a={a}
+                priority={i === 0}
+                sizes={pinned.length === 4 ? CARD_SIZES_4 : CARD_SIZES_3}
+              />
             ))}
           </div>
         </Container>

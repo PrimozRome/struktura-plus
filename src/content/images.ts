@@ -4,7 +4,7 @@
 // Vir: fotografije naročnika iz oktobra 2026. Razmerja so neenotna (posnetki
 // s telefona, pokončni in ležeči) — postavitev jih obreže z object-fit: cover,
 // mere pa so tu zapisane, da ob nalaganju ni premika postavitve.
-// Izjema sta skupini "o-nas" in "splosno", ki sta še s prejšnje strani.
+// Izjema je skupina "o-nas", ki je še s prejšnje strani.
 
 export type Foto = {
   /** pot brez širine in končnice, npr. "/slike/lesene-terase/terase-12" */
@@ -218,16 +218,6 @@ export const foto: Record<string, Foto[]> = {
     { base: "/slike/o-nas/o-nas-marko-na-delu", w: 1600, h: 1125, widths: [400, 800, 1200, 1600], alt: "Marko Pogorevc med gradnjo lesene hiške v gozdu" },
     { base: "/slike/o-nas/o-nas-marko", w: 4284, h: 5712, widths: [400, 800, 1200, 1600], alt: "Marko Pogorevc pri montaži lesenega objekta" },
     { base: "/slike/o-nas/o-nas-montaza", w: 4284, h: 5712, widths: [400, 800, 1200, 1600], alt: "Postavljanje sten lesenega objekta v gozdu" },
-    { base: "/slike/o-nas/o-nas-druzina", w: 1440, h: 1080, widths: [400, 800, 1200, 1440], alt: "Marko Pogorevc z družino" },
-  ],
-  "splosno": [
-    { base: "/slike/splosno/notranja-oprema-1", w: 1881, h: 869, widths: [400, 800, 1200, 1600], alt: "Masivna postelja po meri iz lesa" },
-    { base: "/slike/splosno/notranja-oprema-4", w: 1881, h: 869, widths: [400, 800, 1200, 1600], alt: "Lesena jedilna miza po naročilu" },
-    { base: "/slike/splosno/notranja-oprema-7", w: 1884, h: 869, widths: [400, 800, 1200, 1600], alt: "Lesene omare po meri" },
-    { base: "/slike/splosno/notranja-oprema-3", w: 1159, h: 869, widths: [400, 800, 1159], alt: "Police iz masivnega lesa po meri" },
-    { base: "/slike/splosno/notranja-oprema-9", w: 1920, h: 865, widths: [400, 800, 1200, 1600], alt: "Masivni leseni elementi po meri" },
-    { base: "/slike/splosno/notranja-oprema-6", w: 1200, h: 554, widths: [400, 800, 1200], alt: "Detajl masivnega lesa — površinska obdelava" },
-    { base: "/slike/splosno/objekti-prizidki-3", w: 1200, h: 554, widths: [400, 800, 1200], alt: "Objekt z leseno fasado po meri" },
   ],
 };
 
@@ -246,9 +236,6 @@ export function galerija(slug: string, koliko?: number): Foto[] {
   const vse = (foto[slug] ?? []).slice(1);
   return koliko === undefined ? vse : vse.slice(0, koliko);
 }
-
-/** Splošne fotografije za pristajalno stran in "O nas". */
-export const splosneFoto = foto["splosno"] ?? [];
 
 /** Fotografija po imenu datoteke znotraj skupine — za strani, kjer vrstni red ni dovolj. */
 export function fotoPoImenu(group: string, ime: string): Foto | undefined {

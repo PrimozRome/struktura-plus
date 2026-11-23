@@ -48,7 +48,7 @@ export default function ProjektiPage() {
             {projects.map((p, i) => (
               <article key={p.slug} className="sp-card">
                 <div className="sp-card__media">
-                  <Figure alt={p.imageAlt} ratio="3/2" rounded={false} priority={i < 3} sizes="(max-width: 640px) 100vw, 33vw" />
+                  <Figure alt={p.imageAlt} ratio="3/2" rounded={false} priority={i < 3} sizes="(max-width: 639px) 92vw, (max-width: 1023px) calc(46vw - 20px), (max-width: 1240px) 30vw, 352px" />
                 </div>
                 <div className="flex flex-1 flex-col gap-2 p-5">
                   <h2 className="!text-[20px] font-[family-name:var(--font-display)]">

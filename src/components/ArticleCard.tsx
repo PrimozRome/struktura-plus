@@ -20,8 +20,23 @@ function Meta({ a }: { a: Article }) {
   );
 }
 
+/** Mreža treh stolpcev v polnem vsebniku (--container), izrisano ~365 px. */
+export const CARD_SIZES_3 = "(max-width: 639px) 92vw, (max-width: 1023px) calc(46vw - 20px), (max-width: 1240px) 30vw, 352px";
+
+/** Mreža štirih stolpcev v polnem vsebniku, izrisano ~268 px. */
+export const CARD_SIZES_4 = "(max-width: 639px) 92vw, (max-width: 1023px) calc(46vw - 20px), (max-width: 1240px) 21.5vw, 266px";
+
 /** Izpostavljena kartica s fotografijo — za pripete članke na vrhu. */
-export function ArticleCardLarge({ a, priority = false }: { a: Article; priority?: boolean }) {
+export function ArticleCardLarge({
+  a,
+  priority = false,
+  sizes = CARD_SIZES_3,
+}: {
+  a: Article;
+  priority?: boolean;
+  /** Prepiši, kadar mreža ni trostolpčna — glej CARD_SIZES_4. */
+  sizes?: string;
+}) {
   const f = fotoZaClanek(a);
   return (
     <article className="sp-card">
@@ -34,7 +49,7 @@ export function ArticleCardLarge({ a, priority = false }: { a: Article; priority
           ratio="3/2"
           rounded={false}
           priority={priority}
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          sizes={sizes}
         />
       </div>
       <div className="flex flex-1 flex-col gap-3 p-5">

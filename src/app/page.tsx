@@ -66,7 +66,7 @@ export default function HomePage() {
               alt="Lesena terasa ob hiši, deloma pokrita z nadstreškom, z razgledom na travnik in hribe — izvedba Struktura Plus"
               ratio="4/3"
               priority
-              sizes="(max-width: 1024px) 100vw, 48vw"
+              sizes="(max-width: 1023px) 92vw, (max-width: 1240px) 46vw, 540px"
             />
           </div>
 

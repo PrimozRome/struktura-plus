@@ -94,7 +94,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
               alt={service.heroAlt}
               ratio="4/3"
               priority
-              sizes="(max-width: 1024px) 100vw, 46vw"
+              sizes="(max-width: 1023px) 92vw, (max-width: 1240px) 45vw, 520px"
             />
           </div>
         </Container>
@@ -167,7 +167,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   foto={f}
                   alt={f.alt}
                   ratio="4/3"
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  sizes="(max-width: 639px) 92vw, (max-width: 1023px) calc(46vw - 20px), (max-width: 1240px) 30vw, 352px"
                 />
               ))}
             </div>

@@ -60,7 +60,7 @@ TS_HEAD = '''// SAMODEJNO USTVARJENO — ne urejaj ročno.
 // Vir: fotografije naročnika iz oktobra 2026. Razmerja so neenotna (posnetki
 // s telefona, pokončni in ležeči) — postavitev jih obreže z object-fit: cover,
 // mere pa so tu zapisane, da ob nalaganju ni premika postavitve.
-// Izjema sta skupini "o-nas" in "splosno", ki sta še s prejšnje strani.
+// Izjema je skupina "o-nas", ki je še s prejšnje strani.
 
 export type Foto = {
   /** pot brez širine in končnice, npr. "/slike/lesene-terase/terase-12" */
@@ -93,9 +93,6 @@ export function galerija(slug: string, koliko?: number): Foto[] {
   const vse = (foto[slug] ?? []).slice(1);
   return koliko === undefined ? vse : vse.slice(0, koliko);
 }
-
-/** Splošne fotografije za pristajalno stran in "O nas". */
-export const splosneFoto = foto["splosno"] ?? [];
 
 /** Fotografija po imenu datoteke znotraj skupine — za strani, kjer vrstni red ni dovolj. */
 export function fotoPoImenu(group: string, ime: string): Foto | undefined {
