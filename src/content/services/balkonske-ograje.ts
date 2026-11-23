@@ -25,7 +25,8 @@ export const balkonskeOgraje: Service = {
     "lesene balkonske ograje cenik",
   ],
   cardText: "Lesene in WPC izvedbe, polne ali lamelne. Montaža brez poseganja v fasado.",
-  cardPrice: "80–160 €/tm",
+  cardPrice: "po izmeri",
+  vCeniku: false,
   sections: [
     {
       h2: "Lesena ali WPC izvedba",
@@ -85,19 +86,11 @@ export const balkonskeOgraje: Service = {
       ],
     },
   ],
-  price: {
-    range: "80–160 €/tm",
-    includes: "Material, izdelava in montaža. Demontaža stare ograje in odvoz se obračunata posebej.",
-    factors: [
-      "Material — sibirski macesen je na spodnji meji, WPC z kovinskim ogrodjem na zgornji",
-      "Višina in gostota lamel",
-      "Stanje obstoječih sidrišč in dostop do balkona",
-    ],
-  },
+  price: null,
   faq: [
     {
       q: "Koliko stane lesena balkonska ograja?",
-      a: "Od približno 80 do 160 € na tekoči meter, vključno z materialom, izdelavo in montažo. Sibirski macesen v enostavni lamelni izvedbi je na spodnji meji, WPC s kovinskim ogrodjem na zgornji. Pri balkonih, krajših od treh metrov, damo ceno za celoto.",
+      a: "Ceno pripravimo po izmeri. Balkoni se po dolžini, višini in stanju sidrišč preveč razlikujejo, da bi bila enotna cena na tekoči meter poštena — pri balkonih, krajših od treh metrov, damo ceno za celoto.",
     },
     {
       q: "Kolikšen je lahko razmik med lamelami?",

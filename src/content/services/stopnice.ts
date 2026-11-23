@@ -27,7 +27,7 @@ export const stopnice: Service = {
     "wpc stopnice",
   ],
   cardText: "Notranje in zunanje, v lesu ali kovini. Tudi obloge obstoječih betonskih stopnic.",
-  cardPrice: "od 1.900 €",
+  cardPrice: "po ogledu",
   sections: [
     {
       h2: "Lesene stopnice",
@@ -113,26 +113,16 @@ export const stopnice: Service = {
     {
       h2: "Cena stopnic",
       body: [
-        "Obloga obstoječih betonskih stopnic se začne pri približno 1.900 €, lesene stopnice s kovinsko ali leseno tetivo pri približno 3.500 €. Na ceno najbolj vplivajo vrsta lesa, število korakov in to, ali je potrebna tudi ograja.",
-        "Hrast je približno za tretjino dražji od bukve, ograja pa pri tipičnem stopnišču pomeni od 800 € navzgor. Razpone objavljamo, da se cenovni razred uskladi pred ogledom.",
+        "Cene za stopnice ne objavljamo vnaprej, ker se posli preveč razlikujejo: obloga obstoječih betonskih stopnic je nekaj povsem drugega kot nove stopnice s tetivo. Na ceno najbolj vplivajo vrsta lesa, število korakov in to, ali je potrebna tudi ograja.",
+        "Hrast je približno za tretjino dražji od bukve, ograja pa je vedno ločena postavka. Ponudbo pripravimo po izmeri, da je cena vezana na vaše dejansko stopnišče in ne na povprečje.",
       ],
     },
   ],
-  price: {
-    range: "od 1.900 €",
-    includes:
-      "Spodnja meja velja za oblogo obstoječih betonskih stopnic. Nove stopnice s tetivo se začnejo pri približno 3.500 €. Ograja se obračuna posebej.",
-    factors: [
-      "Vrsta lesa — bukev na spodnji meji, hrast na zgornji",
-      "Število korakov in širina stopnišča",
-      "Ograja — pri tipičnem stopnišču od 800 € navzgor",
-      "Nove stopnice ali obloga obstoječih",
-    ],
-  },
+  price: null,
   faq: [
     {
       q: "Koliko stanejo lesene stopnice?",
-      a: "Obloga obstoječih betonskih stopnic od približno 1.900 €, nove lesene stopnice s tetivo od približno 3.500 €. Odločata vrsta lesa in število korakov; ograja se obračuna posebej. Natančno ceno določimo po izmeri.",
+      a: "Ceno pripravimo po izmeri. Obloga obstoječih betonskih stopnic je bistveno cenejša od novih stopnic s tetivo, odločata pa tudi vrsta lesa in število korakov. Ograja se obračuna posebej.",
     },
     {
       q: "Ali je mogoče obložiti obstoječe betonske stopnice?",

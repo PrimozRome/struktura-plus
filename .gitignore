@@ -17,3 +17,7 @@ _za_izbris/
 
 # Osnutki logotipa in vizitk iz dela s Claudom — ne sodijo v repozitorij.
 Claude outputs/
+
+# Pythonov predpomnilnik iz scripts/ ne sodi v repozitorij.
+__pycache__/
+*.pyc

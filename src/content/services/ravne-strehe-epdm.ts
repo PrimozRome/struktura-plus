@@ -21,7 +21,7 @@ export const ravneStreheEpdm: Service = {
     "prenova ravne strehe",
   ],
   cardText: "Nove strehe in prenove z membrano brez stikov. Zaključki in odvodnjavanje.",
-  cardPrice: "45–80 €/m²",
+  cardPrice: "od 40 €/m²",
   sections: [
     {
       h2: "Kaj je EPDM in zakaj ga uporabljamo",
@@ -62,7 +62,7 @@ export const ravneStreheEpdm: Service = {
     },
   ],
   price: {
-    range: "45–80 €/m²",
+    range: "od 40 €/m²",
     includes: "Membrana, lepljenje in zaključki. Priprava podlage, izolacija in kleparska dela se obračunajo posebej.",
     factors: [
       "Velikost in oblika strehe — več vogalov in prebojev pomeni več dela",

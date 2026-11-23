@@ -38,6 +38,8 @@ export type Service = {
   /** Prikaz cene na kartici. */
   cardPrice: string;
   sections: ServiceSection[];
+  /** Privzeto se storitev prikaže na /cenik. `false` jo izpusti. */
+  vCeniku?: boolean;
   price: PriceBlockData | null;
   faq: FaqItem[];
   /** Podvrste za hasOfferCatalog v Service schemi. */

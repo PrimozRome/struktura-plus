@@ -22,7 +22,10 @@ const crumbs = [
   { name: "O nas", path: "/o-nas" },
 ];
 
-const druzina = fotoPoImenu("o-nas", "o-nas-druzina");
+// Naslovna slika je ilustracija, ne fotografija: družine naročnika namenoma
+// ne objavljamo s pravimi obrazi. Izvirna fotografija ostaja v .raw-slike.
+const ilustracija = fotoPoImenu("o-nas", "o-nas-ilustracija");
+const markoNaDelu = fotoPoImenu("o-nas", "o-nas-marko-na-delu");
 const marko = fotoPoImenu("o-nas", "o-nas-marko");
 const montaza = fotoPoImenu("o-nas", "o-nas-montaza");
 // Posnetek montaže ostrešja je v skupini krovstvo-kleparstvo — skupina
@@ -55,15 +58,18 @@ export default function ONasPage() {
                 Živjo, sem Marko Pogorevc
               </h1>
               <p className="mt-6 max-w-[56ch] text-[18px] leading-relaxed text-[var(--text-muted)]">
-                Oče trem prekrasnim hčerkam, mož in ljubitelj lesa. Že več kot desetletje
+                Oče štirim prekrasnim hčerkam, mož in ljubitelj lesa. Že več kot desetletje
                 izdelujem in montiram stvari, ki morajo stati zunaj, na dežju in soncu, in
                 zdržati dlje, kot traja navdušenje ob predaji.
               </p>
             </div>
+            {/* Razmerje 3/2 je najbližje izvirniku (1130×768), zato obrez
+                odvzame le nekaj slikovnih pik višine; pri 4/3 bi odrezalo
+                figuri na obeh robovih. */}
             <Figure
-              foto={druzina}
-              alt="Marko Pogorevc z ženo in hčerami na počitnicah ob morju"
-              ratio="4/3"
+              foto={ilustracija}
+              alt="Ilustracija družine na sprehodu po poti med gozdom in travniki proti sončnemu zahodu"
+              ratio="3/2"
               priority
               sizes="(max-width: 1024px) 100vw, 46vw"
             />
@@ -115,6 +121,16 @@ export default function ONasPage() {
                 občutiš pa jo v detajlih: kako je konstrukcija sestavljena, kje se skriva
                 statika, kje bo čez pet let vstopila voda.
               </p>
+              {/* Slika zaključuje sekcijo, enako kot ostrešje v prejšnji:
+                  --prose-gap nad njo, --prose-break pod njo. Razmerje 3/2 je
+                  najbližje izvirniku (1600×1125) — pri 4/3 bi obrez odvzel
+                  zunanja robova obeh posnetkov v sestavljenki. */}
+              <Figure
+                foto={markoNaDelu}
+                alt="Marko Pogorevc med gradnjo lesene hiške v gozdu: levo pri pregledu konstrukcije, desno pri vijačenju strešnih letev"
+                ratio="3/2"
+                sizes="(max-width: 768px) 100vw, 720px"
+              />
             </section>
 
             <section>
@@ -132,34 +148,31 @@ export default function ONasPage() {
                 ki se morajo ujeti, zaključni detajli, ki jih večina niti ne opazi — dokler niso
                 narejeni slabo.
               </p>
+              {/* Dve pokončni fotografiji z gradbišča — para ne razbijamo, ker
+                  skupaj povesta zgodbo: posameznik pri delu in objekt, ki iz
+                  tega nastane. Stojita znotraj sekcije in ne v svoji <Section>,
+                  zato ju od zadnjega odstavka loči --prose-gap, enako kot slike
+                  v prejšnjih dveh sekcijah; prej je bil vmes cel --section-y.
+                  Širina ostaja article, da stolpec med branjem ne poskoči. */}
+              <div className="grid gap-5 sm:grid-cols-2">
+                <Figure
+                  foto={marko}
+                  alt="Marko Pogorevc z akumulatorskim vijačnikom med montažo lesenega objekta"
+                  ratio="3/4"
+                  sizes="(max-width: 640px) 100vw, 27vw"
+                />
+                <Figure
+                  foto={montaza}
+                  alt="Postavljanje sten lesene hiške v gozdu, dva monterja pri delu"
+                  ratio="3/4"
+                  sizes="(max-width: 640px) 100vw, 27vw"
+                />
+              </div>
+              <p className="mt-4 text-[15px] text-[var(--text-subtle)]">
+                Montaža lesene hiške v gozdu — od praznega temelja do zaprtih sten v enem dnevu.
+              </p>
             </section>
           </div>
-        </Container>
-      </Section>
-
-      {/* Dve pokončni fotografiji z gradbišča — para ne razbijamo, ker skupaj
-          povesta zgodbo: posameznik pri delu in objekt, ki iz tega nastane.
-          Širina je enaka kot pri besedilu (article), da stolpec med branjem ne
-          poskoči — pri polni širini strani sta pokončna posnetka previsoka. */}
-      <Section className="!pt-0">
-        <Container width="article">
-          <div className="grid gap-5 sm:grid-cols-2">
-            <Figure
-              foto={marko}
-              alt="Marko Pogorevc z akumulatorskim vijačnikom med montažo lesenega objekta"
-              ratio="3/4"
-              sizes="(max-width: 640px) 100vw, 27vw"
-            />
-            <Figure
-              foto={montaza}
-              alt="Postavljanje sten lesene hiške v gozdu, dva monterja pri delu"
-              ratio="3/4"
-              sizes="(max-width: 640px) 100vw, 27vw"
-            />
-          </div>
-          <p className="mt-4 text-[15px] text-[var(--text-subtle)]">
-            Montaža lesene hiške v gozdu — od praznega temelja do zaprtih sten v enem dnevu.
-          </p>
         </Container>
       </Section>
 

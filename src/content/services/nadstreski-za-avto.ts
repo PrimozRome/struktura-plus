@@ -30,7 +30,7 @@ export const nadstreskiZaAvto: Service = {
     ],
     cardText:
       "Za enega ali dva avta. Lesen ali s kovinskim ogrodjem, po potrebi z lopo.",
-    cardPrice: "od 2.900 €",
+    cardPrice: "po ogledu",
     sections: [
       {
         h2: "Nadstrešek za en ali dva avtomobila — kakšne mere",
@@ -84,7 +84,7 @@ export const nadstreskiZaAvto: Service = {
       {
         h2: "Cena nadstreška za avto",
         body: [
-          "Enojni lesen nadstrešek s polikarbonatno kritino se začne pri približno 2.900 €, dvojni pri približno 4.500 €. V znesku so material, konstrukcija, kritina in montaža; temelji in elektrika se obračunajo posebej, ker se po lokacijah preveč razlikujejo.",
+          "Cene za nadstreške za avto ne objavljamo vnaprej, ker nanjo najbolj vplivata teren in način temeljenja, ta pa se od parcele do parcele preveč razlikuje. V ponudbi so material, konstrukcija, kritina in montaža; temelji in elektrika so ločene postavke.",
           "Na končno številko najbolj vplivajo velikost, način temeljenja in kritina. Razpone objavljamo zato, da se ne dobimo na ogledu, če se cenovni razred ne ujema s pričakovanji — razčlenjeno po postavkah je zapisano v članku o ceni nadstreška za avto.",
         ],
       },
@@ -107,20 +107,11 @@ export const nadstreskiZaAvto: Service = {
         ],
       },
     ],
-    price: {
-      range: "od 2.900 €",
-      includes:
-        "Razpon velja za material, konstrukcijo, kritino in montažo. Temelji in elektrika se obračunajo posebej.",
-      factors: [
-        "Velikost — enojni nadstrešek je bistveno cenejši od dvojnega",
-        "Temeljenje — sidranje v obstoječo ploščo je cenejše od novih točkovnih temeljev",
-        "Kritina — polikarbonat je na spodnji meji, opeka na zgornji",
-      ],
-    },
+    price: null,
     faq: [
       {
         q: "Koliko stane nadstrešek za avto?",
-        a: "Enojni lesen nadstrešek s polikarbonatno kritino se začne pri približno 2.900 €, dvojni pri približno 4.500 €. Opečna kritina in zahtevnejše temeljenje ceno dvigneta. Natančno ceno določimo po ogledu, ker nanjo najbolj vplivata teren in način temeljenja.",
+        a: "Ceno določimo po ogledu. Dvojni nadstrešek je bistveno dražji od enojnega, opečna kritina in zahtevnejše temeljenje pa ceno dodatno dvigneta. Ogled je brezplačen, ponudbo zapišemo z razdelanimi postavkami.",
       },
       {
         q: "Ali za nadstrešek za avto potrebujem gradbeno dovoljenje?",

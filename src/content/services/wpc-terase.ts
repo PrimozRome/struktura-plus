@@ -23,7 +23,7 @@ export const wpcTerase: Service = {
     "zunanje talne obloge wpc",
   ],
   cardText: "Kompozitne deske brez premazovanja. Stabilna podkonstrukcija in pravilni razmiki.",
-  cardPrice: "110–170 €/m²",
+  cardPrice: "od 100 €/m²",
   sections: [
     {
       h2: "Kaj je WPC in iz česa je",
@@ -70,7 +70,7 @@ export const wpcTerase: Service = {
     },
   ],
   price: {
-    range: "110–170 €/m²",
+    range: "od 100 €/m²",
     includes: "Deske, podkonstrukcija in montaža. Demontaža stare terase in obroba se obračunata posebej.",
     factors: [
       "Kakovost desk — deske s koekstrudirano zaščitno plastjo so dražje in trajnejše",
@@ -81,7 +81,7 @@ export const wpcTerase: Service = {
   faq: [
     {
       q: "Koliko stane WPC terasa na m²?",
-      a: "Od približno 110 do 170 € na m², vključno z deskami, podkonstrukcijo in montažo. Deske s koekstrudirano zaščitno plastjo so na zgornji meji in jih priporočamo, ker se ne razbarvajo.",
+      a: "Od približno 100 € na m², vključno z deskami, podkonstrukcijo in montažo. Deske s koekstrudirano zaščitno plastjo so dražje in jih priporočamo, ker se ne razbarvajo.",
     },
     {
       q: "Ali se WPC na soncu segreje?",

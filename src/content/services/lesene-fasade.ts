@@ -26,7 +26,7 @@ export const leseneFasade: Service = {
     "obnova lesene fasade",
   ],
   cardText: "Prezračevane fasade iz sibirskega macesna in termolesa. Tudi obnove.",
-  cardPrice: "75–140 €/m²",
+  cardPrice: "od 110 €/m²",
   sections: [
     {
       h2: "Prezračevana konstrukcija po korakih",
@@ -96,11 +96,11 @@ export const leseneFasade: Service = {
     },
   ],
   price: {
-    range: "75–140 €/m²",
+    range: "od 110 €/m²",
     includes:
       "Podkonstrukcija, obloga in montaža. Izolacija, odri in kleparski zaključki se obračunajo posebej.",
     factors: [
-      "Vrsta lesa — smreka je na spodnji meji, termoles in WPC na zgornji",
+      "Vrsta lesa — impregnirana smreka je najcenejša, sibirski macesen in termoles sta dražja",
       "Profil in način pritrjevanja",
       "Dostopnost, višina objekta in potreba po odru",
     ],
@@ -108,7 +108,7 @@ export const leseneFasade: Service = {
   faq: [
     {
       q: "Koliko stane lesena fasada na m²?",
-      a: "Od približno 75 do 140 € na m² za podkonstrukcijo, oblogo in montažo. Sibirski macesen v vodoravni opažni izvedbi je na sredini razpona. Izolacija, odri in kleparski zaključki so ločene postavke.",
+      a: "Od približno 110 € na m² za podkonstrukcijo, oblogo in montažo. Izolacija, odri in kleparski zaključki so ločene postavke.",
     },
     {
       q: "Kateri les je najboljši za fasado?",

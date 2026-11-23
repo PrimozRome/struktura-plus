@@ -33,7 +33,7 @@ export const leseniNadstreski: Service = {
     "montaža nadstreška",
   ],
   cardText: "Nad teraso, nad vhodom ali nad opremo. Enokapni, dvokapni in ravni.",
-  cardPrice: "od 2.400 €",
+  cardPrice: "od 150 €/m²",
   sections: [
     {
       h2: "Lesen nadstrešek za teraso",
@@ -92,7 +92,7 @@ export const leseniNadstreski: Service = {
     {
       h2: "Cena nadstreška za teraso",
       body: [
-        "Lesen nadstrešek za teraso se začne pri približno 2.400 €, nadstrešek nad vhodnimi vrati pri približno 750 €. V razponu so konstrukcija, kritina in montaža; pritrditev na fasado in morebitna sanacija ometa se obračunata posebej.",
+        "Lesen nadstrešek se začne pri približno 150 € na kvadratni meter tlorisa. V ceni so konstrukcija, kritina in montaža; temelji, pritrditev na fasado in morebitna sanacija ometa se obračunajo posebej.",
         "Največja posamična razlika v ponudbi je kritina: polikarbonat proti kaljenemu steklu lahko pomeni tudi podvojen znesek pri isti konstrukciji. Drugi dejavnik je razpon med stebri — vsak meter čez štiri zahteva močnejši nosilec ali lepljen les.",
       ],
     },
@@ -108,9 +108,9 @@ export const leseniNadstreski: Service = {
     },
   ],
   price: {
-    range: "od 2.400 €",
+    range: "od 150 €/m²",
     includes:
-      "Razpon velja za konstrukcijo, kritino in montažo terasnega nadstreška. Nadstrešek nad vhodom je bistveno cenejši, od približno 750 €.",
+      "Konstrukcija, kritina in montaža. Temelji, pritrditev na fasado in morebitna sanacija ometa se obračunajo posebej.",
     factors: [
       "Površina in razpon med stebri",
       "Kritina — polikarbonat proti kaljenemu steklu je največja posamična razlika",
@@ -120,7 +120,7 @@ export const leseniNadstreski: Service = {
   faq: [
     {
       q: "Koliko stane nadstrešek za teraso?",
-      a: "Terasni nadstrešek velikosti približno 4 × 3 m se začne pri okoli 2.400 € s polikarbonatno kritino. S kaljenim steklom je cena približno dvakrat višja. Nadstrešek nad vhodnimi vrati se začne pri približno 750 €.",
+      a: "Od približno 150 € na kvadratni meter tlorisa, s polikarbonatno kritino in montažo. S kaljenim steklom je cena bistveno višja. Pri majhnem nadstrešku nad vhodom je cena na kvadratni meter višja, ker je priprave in pritrjevanja sorazmerno več.",
     },
     {
       q: "Kakšen naklon mora imeti nadstrešek?",

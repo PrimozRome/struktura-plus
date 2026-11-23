@@ -245,7 +245,7 @@ export const articles: Article[] = [
       {
         h2: "Cena v desetih letih",
         body: [
-          "Pri terasi 30 m² je razlika v nakupu približno 600 do 1.200 €. Oljenje lesene terase stane približno 4 do 8 € na m² materiala in dan dela vsaki dve leti. V desetih letih se stroška izenačita — če delo opravljate sami, les ostane cenejši.",
+          "Pri terasi 30 m² je razlika v nakupu nekaj sto evrov, saj se WPC terasa začne pri približno 100 € na kvadratni meter, lesena pri 90 €. Oljenje lesene terase stane približno 4 do 8 € na m² materiala in dan dela vsaki dve leti. V desetih letih se stroška izenačita — če delo opravljate sami, les ostane cenejši.",
         ],
       },
       {
@@ -294,8 +294,8 @@ export const articles: Article[] = [
       {
         h2: "Kratek odgovor",
         body: [
-          "Lesena terasa s podkonstrukcijo in montažo stane okvirno od 90 do 190 € na kvadratni meter. Spodnja meja pomeni sibirski macesen z vidnim privijanjem na leseni podkonstrukciji, zgornja tropski les, kot sta cumaru ali ipe, s skritim pritrjevanjem na nastavljivih podstavkih.",
-          "Razpon je širok, ker cena terase ni cena desk. Deske so pogosto manj kot polovica zneska. Ostalo so podkonstrukcija, pritrdilni material, priprava podlage, zaključni robovi in delo.",
+          "Lesena terasa s podkonstrukcijo in montažo se pri nas začne pri približno 90 € na kvadratni meter. Izhodiščna cena pomeni sibirski macesen z vidnim privijanjem na leseni podkonstrukciji; tropski les, kot sta cumaru ali ipe, s skritim pritrjevanjem na nastavljivih podstavkih, je bistveno dražji.",
+          "Razlike so velike, ker cena terase ni cena desk. Deske so pogosto manj kot polovica zneska. Ostalo so podkonstrukcija, pritrdilni material, priprava podlage, zaključni robovi in delo.",
         ],
       },
       {
@@ -465,7 +465,7 @@ export const articles: Article[] = [
       {
         h2: "Kratek odgovor",
         body: [
-          "Leseni nadstrešek za eno parkirno mesto, okvirno 3 × 5 m, s konstrukcijo, kritino in montažo se začne pri približno 2.900 €, z zahtevnejšimi izvedbami do okoli 4.500 €. Za dve mesti, okvirno 6 × 5 m, je razpon približno 4.500 do 8.000 €. Temelji se obračunajo posebej, ker se po lokacijah preveč razlikujejo.",
+          "Cene nadstreška za avto ne objavljamo vnaprej, ker nanjo najbolj vplivata teren in način temeljenja, ta pa se od parcele do parcele preveč razlikuje. Nadstrešek za dve parkirni mesti, okvirno 6 × 5 m, je bistveno dražji od enojnega, okvirno 3 × 5 m, ker potrebuje močnejšo konstrukcijo in več temeljev. Ponudbo pripravimo po ogledu, temelji so ločena postavka.",
           "Dve mesti nista dvakrat dražji od enega, ker se stebri, orodje in prihod delijo. Na kvadratni meter je večji nadstrešek praviloma ugodnejši.",
         ],
       },
@@ -474,7 +474,7 @@ export const articles: Article[] = [
         list: [
           "Temelji — betonski točkovni temelji in jeklena sidra, ki steber dvignejo nad tla.",
           "Nosilna konstrukcija — stebri, vezi in špirovci iz smrekovega lameliranega ali masivnega lesa.",
-          "Kritina — pločevina, bitumenski skodli, polikarbonat ali steklo; razlika med najcenejšo in najdražjo je lahko 1.500 € pri isti konstrukciji.",
+          "Kritina — pločevina, bitumenski skodli, polikarbonat ali steklo; razlika med najcenejšo in najdražjo je pri isti konstrukciji lahko večja od vseh drugih razlik skupaj.",
           "Odvodnjavanje — žlebovi in odtočne cevi, po potrebi priklop na obstoječi sistem.",
           "Površinska obdelava — lazura ali olje v dveh nanosih.",
           "Montaža in prevoz materiala.",
@@ -870,7 +870,7 @@ export const articles: Article[] = [
       },
       {
         q: "Koliko stane tak nadstrešek?",
-        a: "Manjši nadstrešek nad zunanjo enoto se začne pri približno 450 €, odvisno od mer, kritine in načina pritrditve. Natančno ceno določimo po ogledu.",
+        a: "Ceno manjšega nadstreška nad zunanjo enoto določimo po ogledu, ker je odvisna od mer, kritine in načina pritrditve. Gre za majhno površino, zato je cena na kvadratni meter višja kot pri terasnem nadstrešku.",
       },
     ],
     related: ["leseni-nadstreski", "vrtne-lope-ute-hiske"],

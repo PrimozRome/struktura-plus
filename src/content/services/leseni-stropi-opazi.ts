@@ -22,7 +22,7 @@ export const leseniStropiOpazi: Service = {
     "lesena obloga stene",
   ],
   cardText: "Mansardni in poševni stropi, stenske obloge, tesarski detajli po meri.",
-  cardPrice: "45–95 €/m²",
+  cardPrice: "od 45 €/m²",
   sections: [
     {
       h2: "Kaj je leseni opaž in kaj ni",
@@ -69,10 +69,10 @@ export const leseniStropiOpazi: Service = {
     },
   ],
   price: {
-    range: "45–95 €/m²",
+    range: "od 45 €/m²",
     includes: "Material, podkonstrukcija in montaža. Premaz in razsvetljava se obračunata posebej.",
     factors: [
-      "Vrsta lesa — smreka je na spodnji meji, hrast na zgornji",
+      "Vrsta lesa — smreka je najcenejša, hrast najdražji",
       "Profil in zahtevnost geometrije (poševnine, frčade, niše)",
       "Obdelava in število slojev premaza",
     ],
@@ -80,7 +80,7 @@ export const leseniStropiOpazi: Service = {
   faq: [
     {
       q: "Koliko stane lesen strop na m²?",
-      a: "Od približno 45 do 95 € na m², vključno z materialom, podkonstrukcijo in montažo. Smrekov opaž v ravni izvedbi je na spodnji meji, hrast na poševnem stropu s frčadami na zgornji.",
+      a: "Od približno 45 € na m², vključno z materialom, podkonstrukcijo in montažo. Izhodiščna cena velja za smrekov opaž v ravni izvedbi; hrast in poševni strop s frčadami ceno dvigneta.",
     },
     {
       q: "Ali les v mansardi zniža prostor?",

@@ -60,7 +60,7 @@ export const visokeGrede: Service = {
     "montaža visokih gred",
   ],
   cardText: "Po meri, iz macesna, hrasta ali smreke. Izdelamo, pripeljemo in postavimo.",
-  cardPrice: "od 240 €",
+  cardPrice: "od 300 €",
   sections: [
     {
       h2: "Zakaj visoka greda",
@@ -148,18 +148,18 @@ export const visokeGrede: Service = {
     {
       h2: "Cena visoke grede",
       body: [
-        "Manjša greda iz smreke se začne pri približno 240 €, greda iz sibirskega macesna v pogosti meri 200 × 80 × 60 cm znese okoli 450 do 600 €, hrastova izvedba pa je približno za tretjino dražja od macesnove.",
+        "Manjša greda se začne pri približno 300 €. Večja mera in trajnejši les ceno dvigneta, hrastova izvedba pa je približno za tretjino dražja od macesnove.",
         "Na ceno najbolj vplivajo vrsta lesa, prostornina grede in višina — višja greda ne pomeni le več letev, ampak tudi močnejše vogalnike, ker pritisk mokre zemlje na stranice narašča s kvadratom višine.",
         "Dostava in montaža sta všteti pri naročilu dveh ali več gred; pri eni sami se obračunata posebej, ker je pot enaka ne glede na to, koliko jih peljemo. Zato je pri načrtovanju smiselno naročiti vse grede naenkrat, tudi če jih boste polnili postopoma.",
       ],
     },
   ],
   price: {
-    range: "od 240 €",
+    range: "od 300 €",
     includes:
-      "Spodnja meja velja za manjšo gredo iz smreke. Greda iz sibirskega macesna v meri 200 × 80 × 60 cm znese okoli 450 do 600 €. Cena vključuje izdelavo, zaščitno folijo in pripravo dna; zemlja in polnilo nista vključena.",
+      "Izhodiščna cena velja za manjšo gredo. Vključuje izdelavo, zaščitno folijo in pripravo dna; zemlja in polnilo nista vključena.",
     factors: [
-      "Vrsta lesa — smreka na spodnji meji, hrast na zgornji",
+      "Vrsta lesa — smreka je najcenejša, hrast najdražji",
       "Mera in višina grede",
       "Število gred — dostava in montaža sta všteti pri dveh ali več",
       "Dodatki — oporno ogrodje, mreža proti voluharju, pokrov",
@@ -168,7 +168,7 @@ export const visokeGrede: Service = {
   faq: [
     {
       q: "Koliko stane lesena visoka greda?",
-      a: "Manjša greda iz smreke od približno 240 €, greda iz sibirskega macesna v meri 200 × 80 × 60 cm okoli 450 do 600 €, hrastova približno za tretjino več. Cena vključuje izdelavo, zaščitno folijo in pripravo dna; zemlja ni vključena. Dostava in montaža sta všteti pri dveh ali več gredah.",
+      a: "Od približno 300 € za manjšo gredo. Večja mera in trajnejši les ceno dvigneta, hrastova izvedba je približno za tretjino dražja od macesnove. Cena vključuje izdelavo, zaščitno folijo in pripravo dna; zemlja ni vključena. Dostava in montaža sta všteti pri dveh ali več gredah.",
     },
     {
       q: "Kako visoka naj bo visoka greda?",

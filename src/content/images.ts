@@ -211,6 +211,8 @@ export const foto: Record<string, Foto[]> = {
     { base: "/slike/visoke-grede/tople-grede-3", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Notranjost visoke grede z zaščitno čepasto folijo" },
   ],
   "o-nas": [
+    { base: "/slike/o-nas/o-nas-ilustracija", w: 1130, h: 768, widths: [400, 800, 1130], alt: "Ilustracija družine na sprehodu po poti med gozdom in travniki proti sončnemu zahodu" },
+    { base: "/slike/o-nas/o-nas-marko-na-delu", w: 1600, h: 1125, widths: [400, 800, 1200, 1600], alt: "Marko Pogorevc med gradnjo lesene hiške v gozdu" },
     { base: "/slike/o-nas/o-nas-marko", w: 4284, h: 5712, widths: [400, 800, 1200, 1600], alt: "Marko Pogorevc pri montaži lesenega objekta" },
     { base: "/slike/o-nas/o-nas-montaza", w: 4284, h: 5712, widths: [400, 800, 1200, 1600], alt: "Postavljanje sten lesenega objekta v gozdu" },
     { base: "/slike/o-nas/o-nas-druzina", w: 1440, h: 1080, widths: [400, 800, 1200, 1440], alt: "Marko Pogorevc z družino" },

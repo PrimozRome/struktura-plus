@@ -23,7 +23,7 @@ export const kovinskiNadstreski: Service = {
     "cinkan nadstrešek",
   ],
   cardText: "Jeklo ali aluminij, po meri. Večji razponi, vitkejši profil, brez vzdrževanja.",
-  cardPrice: "od 2.600 €",
+  cardPrice: "od 220 €/m²",
   sections: [
     {
       h2: "Kdaj kovina in kdaj les",
@@ -102,25 +102,25 @@ export const kovinskiNadstreski: Service = {
     {
       h2: "Cena kovinskega nadstreška",
       body: [
-        "Enojni kovinski nadstrešek s polikarbonatno kritino se začne pri približno 2.600 €, dvojni pri približno 4.300 €. V znesku so konstrukcija, zaščita, kritina in montaža; temelji in elektrika se obračunajo posebej.",
+        "Kovinski nadstrešek se začne pri približno 220 € na kvadratni meter tlorisa. V ceni so konstrukcija, zaščita, kritina in montaža; temelji in elektrika se obračunajo posebej.",
         "Na ceno najbolj vplivata zaščita in kritina. Med zgolj barvano konstrukcijo in dupleksom je razlika nekaj sto evrov, med polikarbonatom in kaljenim steklom pa lahko tudi tisoč. Razpone objavljamo zato, da se cenovni razred uskladi pred ogledom in ne po njem.",
       ],
     },
   ],
   price: {
-    range: "od 2.600 €",
+    range: "od 220 €/m²",
     includes:
-      "Razpon velja za konstrukcijo, zaščito, kritino in montažo. Temelji in elektrika se obračunajo posebej.",
+      "Konstrukcija, protikorozijska zaščita, kritina in montaža. Temelji in elektrika se obračunajo posebej.",
     factors: [
       "Zaščita — zgolj barvano, cinkano ali dupleks",
-      "Kritina — polikarbonat na spodnji meji, kaljeno steklo na zgornji",
+      "Kritina — polikarbonat je najcenejši, kaljeno steklo najdražje",
       "Razpon — večji razmik med stebri zahteva močnejše profile",
     ],
   },
   faq: [
     {
       q: "Koliko stane kovinski nadstrešek?",
-      a: "Enojni s polikarbonatno kritino od približno 2.600 €, dvojni od približno 4.300 €. Vključeni so konstrukcija, zaščita, kritina in montaža. Temelji in elektrika se obračunajo posebej, natančno ceno določimo po ogledu.",
+      a: "Od približno 220 € na kvadratni meter tlorisa s polikarbonatno kritino. Vključeni so konstrukcija, zaščita, kritina in montaža. Temelji in elektrika se obračunajo posebej, natančno ceno določimo po ogledu.",
     },
     {
       q: "Ali kovinski nadstrešek rjavi?",

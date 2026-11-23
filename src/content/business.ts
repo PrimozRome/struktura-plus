@@ -61,14 +61,28 @@ export const business = {
  */
 export const legalUpdated = "2026-10-13";
 
+const MESECI = [
+  "januar", "februar", "marec", "april", "maj", "junij",
+  "julij", "avgust", "september", "oktober", "november", "december",
+] as const;
+
 /** "2026-09-22" → "22. september 2026" */
 export function formatSlovenianDate(iso: string): string {
-  const meseci = [
-    "januar", "februar", "marec", "april", "maj", "junij",
-    "julij", "avgust", "september", "oktober", "november", "december",
-  ];
   const [y, m, d] = iso.split("-").map(Number);
-  return `${d}. ${meseci[m - 1]} ${y}`;
+  return `${d}. ${MESECI[m - 1]} ${y}`;
+}
+
+/**
+ * Mesec zadnje posodobitve cenika, v obliki "YYYY-MM".
+ * Cene materiala se hitro spreminjajo, zato je datum izpisan pod tabelo na /cenik.
+ * Ob vsaki spremembi cen ga je treba dvigniti.
+ */
+export const priceListUpdated = "2026-11";
+
+/** "2026-11" → "november 2026" */
+export function formatSlovenianMonth(iso: string): string {
+  const [y, m] = iso.split("-").map(Number);
+  return `${MESECI[m - 1]} ${y}`;
 }
 
 export const nav = [

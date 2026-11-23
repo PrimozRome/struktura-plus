@@ -31,7 +31,7 @@ export const vrtneLopeUteHiske: Service = {
     "hiška za robotsko kosilnico",
   ],
   cardText: "Lopa za orodje, drvarnica, lopa z nadstreškom. Po meri prostora, ne iz kataloga.",
-  cardPrice: "od 1.900 €",
+  cardPrice: "od 200 €/m²",
   sections: [
     {
       h2: "Lopa za orodje",
@@ -78,7 +78,7 @@ export const vrtneLopeUteHiske: Service = {
     },
   ],
   price: {
-    range: "od 1.900 €",
+    range: "od 200 €/m²",
     includes:
       "Konstrukcija, obloga, streha, vrata in montaža. Temelji ali plošča ter elektrika se obračunajo posebej.",
     factors: [
@@ -90,7 +90,7 @@ export const vrtneLopeUteHiske: Service = {
   faq: [
     {
       q: "Koliko stane lesena vrtna lopa?",
-      a: "Manjša zaprta lopa približno 2 × 3 m se začne pri okoli 1.900 €, odprta drvarnica pri približno 1.200 €. Kombinacija lope z nadstreškom je odvisna od velikosti nadstreška. Ceno določimo po ogledu, ker nanjo najbolj vplivata teren in način temeljenja.",
+      a: "Od približno 200 € na kvadratni meter tlorisa. Odprta drvarnica je bistveno cenejša od zaprte lope z vrati in okni. Ceno potrdimo po ogledu, ker nanjo najbolj vplivata teren in način temeljenja.",
     },
     {
       q: "Ali za vrtno lopo potrebujem gradbeno dovoljenje?",

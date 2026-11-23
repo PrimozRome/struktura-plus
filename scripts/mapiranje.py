@@ -239,6 +239,10 @@ GROUPS = {
 
   # --- Ne-storitvene skupine (ostajajo s stare strani) ----------------------
   "o-nas": [
+    # Naslovna slika strani O nas je ilustracija, ne fotografija: družine
+    # naročnika namenoma ne objavljamo s pravimi obrazi.
+    ("o-nas-ilustracija", "Ilustracija družine na sprehodu po poti med gozdom in travniki proti sončnemu zahodu"),
+    ("o-nas-marko-na-delu", "Marko Pogorevc med gradnjo lesene hiške v gozdu"),
     ("o-nas-marko",   "Marko Pogorevc pri montaži lesenega objekta"),
     ("o-nas-montaza", "Postavljanje sten lesenega objekta v gozdu"),
     ("o-nas-druzina", "Marko Pogorevc z družino"),

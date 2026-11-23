@@ -29,7 +29,7 @@ export const leseneTerase: Service = {
     "obnova lesene terase",
   ],
   cardText: "Sibirski macesen, cumaru in ipe. Skrito pritrjevanje in natančna podkonstrukcija.",
-  cardPrice: "90–190 €/m²",
+  cardPrice: "od 90 €/m²",
   sections: [
     {
       h2: "Vrste lesa v praksi",
@@ -100,11 +100,11 @@ export const leseneTerase: Service = {
     },
   ],
   price: {
-    range: "90–190 €/m²",
+    range: "od 90 €/m²",
     includes:
       "Material, podkonstrukcija in montaža. Demontaža stare terase, temelji in obroba se obračunajo posebej.",
     factors: [
-      "Vrsta lesa — sibirski macesen je na spodnji meji, ipe na zgornji",
+      "Vrsta lesa — sibirski macesen je najcenejši, ipe najdražji",
       "Skrito pritrjevanje je približno 10–15 % dražje od vidnega",
       "Teren, stopnice, obrobe in izvedba okoli bazena",
     ],
@@ -112,7 +112,7 @@ export const leseneTerase: Service = {
   faq: [
     {
       q: "Koliko stane lesena terasa na m²?",
-      a: "Od približno 90 do 190 € na m², vključno z materialom, podkonstrukcijo in montažo. Sibirski macesen z vidnim privijanjem je na spodnji meji, ipe s skritim pritrjevanjem na zgornji. Demontaža stare terase in obroba sta ločeni postavki.",
+      a: "Od približno 90 € na m², vključno z materialom, podkonstrukcijo in montažo. Izhodiščna cena velja za sibirski macesen z vidnim privijanjem; ipe in skrito pritrjevanje ceno dvigneta. Demontaža stare terase in obroba sta ločeni postavki.",
     },
     {
       q: "Kateri les je najboljši za teraso?",

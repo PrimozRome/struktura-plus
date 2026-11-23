@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { services } from "@/content/services";
+import { priceListUpdated, formatSlovenianMonth } from "@/content/business";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbSchema, faqSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/JsonLd";
@@ -22,8 +23,8 @@ const crumbs = [
 
 const cenikFaq = [
   {
-    q: "Zakaj so cene navedene kot razpon in ne kot fiksna številka?",
-    a: "Ker sta pri vsakem projektu teren in dostop drugačna. Razpon pove, v kakšen razred se spuščate; natančno ceno določimo po ogledu in jo zapišemo v ponudbo z razdelanimi postavkami.",
+    q: "Zakaj so cene navedene kot izhodišče in ne kot fiksna številka?",
+    a: "Ker sta pri vsakem projektu teren in dostop drugačna. Izhodiščna cena pove, v kakšen razred se spuščate; natančno ceno določimo po ogledu in jo zapišemo v ponudbo z razdelanimi postavkami.",
   },
   {
     q: "Je ogled brezplačen?",
@@ -40,8 +41,10 @@ const cenikFaq = [
 ];
 
 export default function CenikPage() {
-  const withPrices = services.filter((s) => s.price);
-  const withoutPrices = services.filter((s) => !s.price);
+  // Balkonske ograje in podobne storitve, označene z `vCeniku: false`, se v cenik ne uvrstijo.
+  const vCeniku = services.filter((s) => s.vCeniku !== false);
+  const withPrices = vCeniku.filter((s) => s.price);
+  const withoutPrices = vCeniku.filter((s) => !s.price);
 
   return (
     <>
@@ -54,7 +57,7 @@ export default function CenikPage() {
             Okvirne cene po storitvah
           </h1>
           <p className="mt-6 max-w-[62ch] text-[18px] leading-relaxed text-[var(--text-muted)]">
-            Razponi spodaj vključujejo material in montažo. Povemo jih vnaprej, ker se nam zdi
+            Izhodiščne cene spodaj vključujejo material in montažo. Povemo jih vnaprej, ker se nam zdi
             pošteno, da veste, v kakšen razred se spuščate, še preden se slišimo — in ker nočemo
             hoditi na oglede, kjer se pričakovanja in proračun sploh ne srečata.
           </p>
@@ -90,7 +93,7 @@ export default function CenikPage() {
                     </th>
                     <td className="py-4 pr-4 text-[17px] font-semibold">Po ogledu</td>
                     <td className="py-4 text-[15px] leading-relaxed text-[var(--text-muted)]">
-                      Cene se razlikujejo preveč, da bi bil razpon pošten. Ponudbo pripravimo po ogledu.
+                      Cene se razlikujejo preveč, da bi bilo objavljeno izhodišče pošteno. Ponudbo pripravimo po ogledu.
                     </td>
                   </tr>
                 ))}
@@ -98,9 +101,17 @@ export default function CenikPage() {
             </table>
           </div>
 
-          <p className="mt-6 max-w-[68ch] text-[13px] text-[var(--text-subtle)]">
-            Razponi so informativni in ne predstavljajo ponudbe. Končna cena je odvisna od terena,
-            dostopa, izbranega materiala in obsega pripravljalnih del.
+          <p className="mt-6 text-[13px] text-[var(--text-subtle)]">
+            Cenik posodobljen:{" "}
+            <time dateTime={priceListUpdated} className="font-semibold text-[var(--text-muted)]">
+              {formatSlovenianMonth(priceListUpdated)}
+            </time>
+          </p>
+
+          <p className="mt-2 max-w-[68ch] text-[13px] text-[var(--text-subtle)]">
+            Navedene cene so izhodiščne in informativne ter ne predstavljajo ponudbe. Končna cena je odvisna od terena,
+            dostopa, izbranega materiala in obsega pripravljalnih del. Cene materiala se spreminjajo, zato cenik
+            občasno posodobimo.
           </p>
         </Container>
       </Section>

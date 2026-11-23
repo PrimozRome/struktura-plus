@@ -26,7 +26,7 @@ export const lesenePergole: Service = {
     "lesene pergole za terase",
   ],
   cardText: "Nad teraso ali samostoječe na vrtu. Letve, platno ali rastline za senco.",
-  cardPrice: "od 1.600 €",
+  cardPrice: "od 130 €/m²",
   sections: [
     {
       h2: "Pergola nad teraso",
@@ -68,7 +68,7 @@ export const lesenePergole: Service = {
     },
   ],
   price: {
-    range: "od 1.600 €",
+    range: "od 130 €/m²",
     includes: "Konstrukcija, letve in montaža. Temelji, platno in razsvetljava se obračunajo posebej.",
     factors: [
       "Velikost in razpon med stebri",
@@ -79,7 +79,7 @@ export const lesenePergole: Service = {
   faq: [
     {
       q: "Koliko stane lesena pergola?",
-      a: "Prislonjena pergola približno 4 × 3 m se začne pri okoli 1.600 €, samostoječa pri približno 2.200 €, ker potrebuje štiri temelje in močnejše stebre. Platno in razsvetljava sta ločeni postavki.",
+      a: "Od približno 130 € na kvadratni meter tlorisa. Samostoječa pergola je dražja od prislonjene, ker potrebuje štiri temelje in močnejše stebre. Platno in razsvetljava sta ločeni postavki.",
     },
     {
       q: "Ali pergola ščiti pred dežjem?",

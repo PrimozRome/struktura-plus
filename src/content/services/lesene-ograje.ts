@@ -29,7 +29,7 @@ export const leseneOgraje: Service = {
     "izdelava lesene vrtne ograje",
   ],
   cardText: "Vrtne in dvoriščne ograje, lamelne izvedbe in pregradne stene za zasebnost.",
-  cardPrice: "70–150 €/tm",
+  cardPrice: "od 70 €/tm",
   sections: [
     {
       h2: "Vrtna in dvoriščna ograja",
@@ -82,11 +82,11 @@ export const leseneOgraje: Service = {
     },
   ],
   price: {
-    range: "70–150 €/tm",
+    range: "od 70 €/tm",
     includes:
       "Stebri, polnilo, okovje in montaža. Betonski temelji, vrata in odvoz stare ograje so ločene postavke.",
     factors: [
-      "Material — smreka je na spodnji meji, WPC in sibirski macesen na zgornji",
+      "Material — impregnirana smreka je najcenejša, sibirski macesen dražji",
       "Višina ograje in gostota polnila",
       "Teren — naklon, skala in obstoječi objekti podaljšajo temeljenje",
     ],
@@ -94,7 +94,7 @@ export const leseneOgraje: Service = {
   faq: [
     {
       q: "Koliko stane lesena ograja na meter?",
-      a: "Od približno 70 do 150 € na tekoči meter, vključno s stebri, polnilom, okovjem in montažo. Impregnirana smreka v enostavni izvedbi je na spodnji meji, sibirski macesen ali WPC v lamelni izvedbi na zgornji. Temelji se obračunajo posebej.",
+      a: "Od približno 70 € na tekoči meter, vključno s stebri, polnilom, okovjem in montažo. Izhodiščna cena velja za impregnirano smreko v enostavni izvedbi; sibirski macesen in lamelna izvedba ceno dvigneta. Temelji se obračunajo posebej.",
     },
     {
       q: "Kako globoki morajo biti temelji za ograjo?",

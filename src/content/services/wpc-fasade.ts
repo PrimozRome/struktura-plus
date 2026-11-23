@@ -22,7 +22,7 @@ export const wpcFasade: Service = {
     "wpc fasada cena",
   ],
   cardText: "Prezračevana fasada iz kompozitnih desk. Brez premazovanja, z barvo, ki ostane.",
-  cardPrice: "95–165 €/m²",
+  cardPrice: "od 150 €/m²",
   sections: [
     {
       h2: "Kje se WPC fasada splača",
@@ -60,7 +60,7 @@ export const wpcFasade: Service = {
     },
   ],
   price: {
-    range: "95–165 €/m²",
+    range: "od 150 €/m²",
     includes:
       "Obloga, aluminijasta podkonstrukcija in montaža. Odstranitev stare obloge, obrobe in okenske špalete se obračunajo posebej.",
     factors: [
@@ -72,7 +72,7 @@ export const wpcFasade: Service = {
   faq: [
     {
       q: "Koliko stane WPC fasada na m²?",
-      a: "Od približno 95 do 165 € na kvadratni meter z aluminijasto podkonstrukcijo in montažo. Oder, obrobe in špalete se obračunajo posebej.",
+      a: "Od približno 150 € na kvadratni meter z aluminijasto podkonstrukcijo in montažo. Oder, obrobe in špalete se obračunajo posebej.",
     },
     {
       q: "Je WPC fasada boljša od lesene?",

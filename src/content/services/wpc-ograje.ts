@@ -25,7 +25,7 @@ export const wpcOgraje: Service = {
     "ograje za teraso",
   ],
   cardText: "Kompozitne deske brez premazovanja. Nosilni stebri in raztezne reže, ki ograjo držijo ravno.",
-  cardPrice: "100–180 €/tm",
+  cardPrice: "od 80 €/tm",
   sections: [
     {
       h2: "Kdaj se WPC ograja splača",
@@ -79,7 +79,7 @@ export const wpcOgraje: Service = {
     },
   ],
   price: {
-    range: "100–180 €/tm",
+    range: "od 80 €/tm",
     includes:
       "Deske, stebri, pritrdilni material in montaža. Temeljenje, demontaža stare ograje in vrata se obračunajo posebej.",
     factors: [
@@ -91,11 +91,11 @@ export const wpcOgraje: Service = {
   faq: [
     {
       q: "Koliko stane WPC ograja na tekoči meter?",
-      a: "Od približno 100 do 180 € na tekoči meter z montažo, odvisno od višine in od tega, ali je izvedba polna ali z režami. Temeljenje se obračuna posebej, ker je odvisno od terena.",
+      a: "Od približno 80 € na tekoči meter z montažo, odvisno od višine in od tega, ali je izvedba polna ali z režami. Temeljenje se obračuna posebej, ker je odvisno od terena.",
     },
     {
       q: "Ali je WPC ograja dražja od lesene?",
-      a: "Ob nakupu da, običajno za četrtino do tretjino. Razlika se povrne pri vzdrževanju: lesena ograja potrebuje premaz vsaki dve do tri leta, WPC samo pranje.",
+      a: "Ob nakupu da, a razlika je manjša, kot se zdi: izhodišče je približno 80 € na tekoči meter proti 70 € pri lesu. Povrne se pri vzdrževanju, ker lesena ograja potrebuje premaz vsaki dve do tri leta, WPC pa samo pranje.",
     },
     {
       q: "Ali WPC ograja na soncu bledi?",
