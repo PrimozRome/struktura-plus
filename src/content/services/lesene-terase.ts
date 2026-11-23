@@ -149,5 +149,5 @@ export const leseneTerase: Service = {
   woods: ["Sibirski macesen", "Cumaru", "Ipe / lapacho", "Termoobdelan les"],
   related: ["wpc-terase", "leseni-nadstreski", "lesene-ograje"],
   heroAlt:
-    "Velika lesena terasa ob hiši z razgledom na griče — izvedba Struktura Plus",
+    "Lesena terasa ob hiši, deloma pokrita z nadstreškom, z razgledom na travnik in hribe — izvedba Struktura Plus",
 };

@@ -19,6 +19,7 @@ export type Foto = {
 
 export const foto: Record<string, Foto[]> = {
   "lesene-terase": [
+    { base: "/slike/lesene-terase/naslovna-terasa", w: 1189, h: 836, widths: [400, 800, 1189], alt: "Lesena terasa ob hiši, deloma pokrita z nadstreškom, z razgledom na travnik in hribe" },
     { base: "/slike/lesene-terase/lesene-terase-17", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Velika lesena terasa ob hiši z razgledom na griče" },
     { base: "/slike/lesene-terase/lesene-terase-23", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Nova lesena terasa pred hišo z zelenimi polkni" },
     { base: "/slike/lesene-terase/lesene-terase-5", w: 1600, h: 720, widths: [400, 800, 1200, 1600], alt: "Široka lesena terasa na nastavljivih podstavkih pred leseno hišo" },

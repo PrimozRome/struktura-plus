@@ -25,6 +25,9 @@ IZPUŠČENO NAMENOMA: kovinski-nadstreski-5, -7 in -9 so 3D vizualizacije
 GROUPS = {
   # --- Terase ---------------------------------------------------------------
   "lesene-terase": [
+    # Naslovnica. Ista slika nosi hero domače strani, naslovnico storitvene
+    # podstrani in kartico na /storitve, zato stoji tu in ne podvojena drugje.
+    ("naslovna-terasa",    "Lesena terasa ob hiši, deloma pokrita z nadstreškom, z razgledom na travnik in hribe"),
     ("lesene-terase-17",   "Velika lesena terasa ob hiši z razgledom na griče"),
     ("lesene-terase-23",   "Nova lesena terasa pred hišo z zelenimi polkni"),
     ("lesene-terase-5",    "Široka lesena terasa na nastavljivih podstavkih pred leseno hišo"),

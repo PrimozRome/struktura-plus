@@ -57,9 +57,13 @@ export default function HomePage() {
                 <Link href="/storitve" className="sp-btn sp-btn--secondary">Poglej storitve</Link>
               </div>
             </div>
+            {/* Naslovnica skupine lesene-terase: ista fotografija nosi hero
+                domače strani, naslovnico storitvene podstrani in kartico na
+                /storitve — po naročnikovi odločitvi ena slika za vsa tri mesta.
+                Razmerje ostaja 4/3, kot je zasnovana postavitev hera. */}
             <Figure
               foto={heroFoto("lesene-terase")}
-              alt="Lesena terasa iz sibirskega macesna z nadstreškom ob družinski hiši — izvedba Struktura Plus"
+              alt="Lesena terasa ob hiši, deloma pokrita z nadstreškom, z razgledom na travnik in hribe — izvedba Struktura Plus"
               ratio="4/3"
               priority
               sizes="(max-width: 1024px) 100vw, 48vw"
