@@ -111,7 +111,7 @@ export default function ONasPage() {
               <h2>Od montažnih gradbišč do CLT hiš</h2>
               <p>
                 V svoji poklicni poti sem delal na mnogih montažnih projektih. Nekaj let sem bil
-                glavni monter pri izdelavi in montaži lesenih skeletnih in CLT ekoloških hiš pri
+                odgovorni monter pri izdelavi in montaži lesenih skeletnih in CLT ekoloških hiš pri
                 podjetju Ecolution. Postavljanje cele hiše v nekaj dneh te nauči dvoje: da mora
                 biti vsaka mera pravilna že v delavnici, ker na gradbišču ni časa za popravljanje,
                 in da si pri montaži odvisen od ljudi okoli sebe — zato je dogovor treba držati.
