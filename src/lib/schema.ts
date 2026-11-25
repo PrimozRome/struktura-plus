@@ -49,11 +49,13 @@ export function businessSchema() {
       "@type": a.kind === "mesto" ? "City" : "AdministrativeArea",
       name: a.name,
     })),
-    openingHoursSpecification: {
-      "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-      description: business.openingHours,
-    },
+    /*
+     * openingHoursSpecification je namenoma izpuščen. Ta tip zahteva polji
+     * opens in closes; "po dogovoru" v njem ni izrazljivo, zapis brez obeh pa
+     * Google spregleda. Odpiralni čas sodi v Google Business Profile, kjer je
+     * "po dogovoru" podprta nastavitev. Na strani /kontakt je še vedno zapisan
+     * kot besedilo iz business.openingHours.
+     */
     ...(business.sameAs.length ? { sameAs: business.sameAs } : {}),
   };
 }
