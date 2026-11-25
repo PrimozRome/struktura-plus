@@ -32,8 +32,9 @@ export default function ProjektiPage() {
           <p className="sp-eyebrow">Reference</p>
           <h1 className="mt-3 max-w-[20ch] text-[length:var(--text-display-lg)]">Izvedeni projekti</h1>
           <p className="mt-6 max-w-[62ch] text-[18px] leading-relaxed text-[var(--text-muted)]">
-            Vsak projekt ima naveden kraj, uporabljen material in leto izvedbe — da vidite, kaj
-            konkretno smo naredili in s čim, ne le kako je videti.
+            Spodaj je izbor projektov, ki jih predstavljamo podrobneje — ne seznam vsega, kar
+            smo izvedli. Vsak ima naveden kraj, uporabljen material in leto izvedbe, da vidite,
+            kaj konkretno smo naredili in s čim, ne le kako je videti.
           </p>
 
           {!PROJECTS_READY && (
