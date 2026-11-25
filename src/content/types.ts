@@ -71,6 +71,12 @@ export type Project = {
   fotoSkupina?: string;
   /** Ime načrta ali sheme znotraj `fotoSkupina`. Izriše se neobrezana, čez celotno širino. */
   shema?: string;
+  /**
+   * Galerija po meri: določa vrstni red in lahko sega v druge skupine, kadar
+   * je fotografija že na strani in je ne želimo podvojiti na disku.
+   * Brez nje velja vrstni red skupine `fotoSkupina`.
+   */
+  galerija?: { skupina: string; ime: string }[];
   /** Naslovnica projekta. Lahko kaže v drugo skupino, da se datoteka ne podvaja. */
   naslovnica?: { skupina: string; ime: string };
   imageAlt: string;

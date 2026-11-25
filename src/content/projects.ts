@@ -3,7 +3,7 @@ import { fotoZa, heroFoto, fotoPoImenu } from "./images";
 
 /**
  * Izvedeni projekti. Kraj, material in leto so obvezni — so vir dolgega repa
- * v iskalniku ("vrtna lopa Limbarska Gora", "CLT savna") in edini način, da
+ * v iskalniku ("vrtna lopa za savno", "CLT savna") in edini način, da
  * galerija prispeva k lokalni vidnosti.
  *
  * Fotografije: `fotoSkupina` je ime skupine v scripts/mapiranje.py in hkrati
@@ -16,10 +16,10 @@ export const PROJECTS_READY = true;
 
 export const projects: Project[] = [
   {
-    slug: "savna-limbarska-gora",
+    slug: "vrtna-lopa-za-savno",
     title: "Vrtna lopa za zunanjo savno",
-    place: "Limbarska Gora",
-    material: "CLT, prezračevalna macesnova fasada, kamena volna",
+    place: "Osrednja Slovenija",
+    material: "CLT, prezračevalna macesnova fasada, smrekov opaž, kamena volna",
     year: 2026,
     service: "vrtne-lope-ute-hiske",
     summary:
@@ -39,14 +39,37 @@ export const projects: Project[] = [
       "Izdelava in montaža strešne pločevine ter žlebov",
       "Izolacija ostrešja in sten s kameno volno",
       "Montaža prezračevalne macesnove fasade",
+      "Opažiranje stropa",
+      "Opažiranje notranje predelne stene",
       "Izdelava vhodnih vrat iz CLT-ja in montaža",
       "Nabava in vgradnja lesenega okna",
     ],
-    fotoSkupina: "savna-limbarska-gora",
+    fotoSkupina: "savna-vrtna-lopa",
     shema: "savna-nacrt",
+    // Vrstni red je potek del. Dva posnetka sta že drugje na strani, zato sta
+    // tu navedena po sklicu in ne kopirana v to skupino.
+    galerija: [
+      { skupina: "savna-vrtna-lopa", ime: "savna-clt-plosce" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-prva-stena" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-stene-lega" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-meritve" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-ostresje" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-ostresje-vijacenje" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-kritina-letve" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-kritina" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-fasada-folija" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-fasada-letve" },
+      { skupina: "vrtne-lope-ute-hiske", ime: "vrtne-lope-25" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-fasada-macesen" },
+      { skupina: "lesene-fasade", ime: "lesene-fasade-montaza-5" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-opaz-notranjost" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-interier-garderoba" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-interier-savna" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-interier-pocitek" },
+    ],
     naslovnica: { skupina: "lesene-fasade", ime: "lesene-fasade-montaza-3" },
     imageAlt:
-      "Vrtna lopa za zunanjo savno z macesnovo prezračevalno fasado, izvedba na Limbarski Gori",
+      "Vrtna lopa za zunanjo savno z macesnovo prezračevalno fasado in dvokapnim ostrešjem",
     placeholder: false,
   },
 ];
@@ -67,8 +90,13 @@ export function projektShema(p: Project) {
   return fotoPoImenu(p.fotoSkupina, p.shema);
 }
 
-/** Galerija projekta — fotografije skupine brez naslovnice in brez načrta. */
+/** Galerija projekta — po meri, sicer skupina brez naslovnice in načrta. */
 export function projektGalerija(p: Project) {
+  if (p.galerija) {
+    return p.galerija
+      .map((g) => fotoPoImenu(g.skupina, g.ime))
+      .filter((f): f is NonNullable<typeof f> => Boolean(f));
+  }
   if (!p.fotoSkupina) return [];
   const naslovna = naslovnaFoto(p);
   const shema = projektShema(p);
