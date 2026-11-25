@@ -231,6 +231,9 @@ GROUPS = {
     # Montaža obloge na vrtni hiški v gozdu, oktober 2026. Pokončen posnetek —
     # galerija ga izriše v razmerju 4/3, zato ga obreže na sredinski pas.
     ("vrtne-lope-montaza-4", "Montaža navpične lesene obloge na vrtni hiški, vidne letve, vetrna zapora in zunanja elektro omarica"),
+    # Notranjost iste hiške. Izvirnik je pokončen; obrezan je na 4/3 s kadrom
+    # višje, ker bi sredinski obrez galerije odrezal prav opažen strop.
+    ("vrtne-lope-interier-opaz", "Notranjost vrtne hiške z opaženimi stenami in poševnim stropom ter odprtino v shrambo"),
   ],
   # ZAČASNO: stran Stopnice nima lastnih fotografij. Do takrat sta tu dve, ki
   # res prikazujeta stopnice — gre za isti posnetek kot wpc-terase-31 in -24,
