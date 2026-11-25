@@ -34,6 +34,7 @@ async function preberiPriloge(formData: FormData): Promise<PrilogaZVsebino[] | n
 export async function submitInquiry(formData: FormData) {
   // Honeypot — boti izpolnijo skrito polje, ljudje ne. Bota ne obveščamo, da
   // smo ga prepoznali: dobi enak zaslon kot vsi drugi, poslano pa ni nič.
+  // Parametra oddano=1 namenoma ne dobi, da bot ne sproži dogodka v GA4.
   if ((formData.get("company") as string)?.length) {
     redirect("/hvala");
   }
@@ -68,5 +69,8 @@ export async function submitInquiry(formData: FormData) {
     redirect("/kontakt?napaka=posta#obrazec");
   }
 
-  redirect("/hvala");
+  // Parameter prejme samo ta pot, torej ko je pošta res odšla. Skripta na
+  // /hvala ga prebere, pošlje dogodek v GA4 in ga takoj pobriše iz naslova,
+  // da osvežitev strani konverzije ne šteje drugič.
+  redirect("/hvala?oddano=1");
 }
