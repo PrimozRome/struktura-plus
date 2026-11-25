@@ -1,7 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { projects, getProject, PROJECTS_READY } from "@/content/projects";
+import {
+  projects,
+  getProject,
+  PROJECTS_READY,
+  naslovnaFoto,
+  projektGalerija,
+  projektShema,
+} from "@/content/projects";
 import { getService } from "@/content/services";
 import { pageMeta } from "@/lib/seo";
 import { breadcrumbSchema } from "@/lib/schema";
@@ -33,6 +40,9 @@ export default async function ProjektPage({ params }: { params: Promise<{ slug: 
   const p = getProject(slug);
   if (!p) notFound();
   const service = getService(p.service);
+  const naslovna = naslovnaFoto(p);
+  const slike = projektGalerija(p);
+  const shema = projektShema(p);
 
   const crumbs = [
     { name: "Domov", path: "/" },
@@ -60,7 +70,15 @@ export default async function ProjektPage({ params }: { params: Promise<{ slug: 
             ))}
           </dl>
           <div className="mt-10">
-            <Figure alt={p.imageAlt} ratio="16/9" priority sizes="100vw" />
+            {/* 3/2 namesto 16/9: posnetki z gradbišč so v razmerju 4:3, pri
+                16/9 bi obrez odvzel četrtino višine. Širina je širina vsebnika. */}
+            <Figure
+              foto={naslovna}
+              alt={p.imageAlt}
+              ratio="3/2"
+              priority
+              sizes="(max-width: 1240px) 92vw, 1144px"
+            />
           </div>
         </Container>
       </Section>
@@ -71,6 +89,16 @@ export default async function ProjektPage({ params }: { params: Promise<{ slug: 
             {p.body.map((t, i) => (
               <p key={i} className="text-[var(--text-muted)]">{t}</p>
             ))}
+            {p.scope && p.scope.length > 0 && (
+              <section>
+                <h2>Obseg del</h2>
+                <ul>
+                  {p.scope.map((s) => (
+                    <li key={s}>{s}</li>
+                  ))}
+                </ul>
+              </section>
+            )}
             {service && (
               <p>
                 Več o tej storitvi:{" "}
@@ -80,6 +108,59 @@ export default async function ProjektPage({ params }: { params: Promise<{ slug: 
           </div>
         </Container>
       </Section>
+
+      {shema && (
+        <Section className="!pt-0">
+          <Container>
+            <p className="sp-eyebrow">Načrt</p>
+            <h2 className="mt-3">Konstrukcija in ostrešje</h2>
+            {/* Risbe ne smemo obrezati, zato tu ni <Figure> s fiksnim razmerjem,
+                ampak <picture> z merami iz manifesta: cela risba, brez obreza in
+                brez premika postavitve ob nalaganju. */}
+            <picture>
+              <source
+                type="image/avif"
+                srcSet={shema.widths.map((w) => `${shema.base}-${w}.avif ${w}w`).join(", ")}
+                sizes="(max-width: 1240px) 92vw, 1144px"
+              />
+              <img
+                src={`${shema.base}-${shema.widths[shema.widths.length - 1]}.webp`}
+                srcSet={shema.widths.map((w) => `${shema.base}-${w}.webp ${w}w`).join(", ")}
+                sizes="(max-width: 1240px) 92vw, 1144px"
+                width={shema.w}
+                height={shema.h}
+                alt={shema.alt}
+                loading="lazy"
+                decoding="async"
+                className="mt-8 h-auto w-full rounded-[var(--radius-md)] bg-[var(--bg-muted)]"
+              />
+            </picture>
+          </Container>
+        </Section>
+      )}
+
+      {slike.length > 0 && (
+        <Section className="!pt-0">
+          <Container>
+            <p className="sp-eyebrow">Potek del</p>
+            <h2 className="mt-3">Kako je nastajalo</h2>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {slike.map((f) => (
+                <Figure
+                  key={f.base}
+                  foto={f}
+                  alt={f.alt}
+                  /* Razmerje po posamezni fotografiji: posnetki z gradbišča so
+                     pokončni, načrt je ležeč. Enotno 4/3 bi pokončnim odrezalo
+                     44 % višine. */
+                  ratio={f.w >= f.h ? "4/3" : "3/4"}
+                  sizes="(max-width: 639px) 92vw, (max-width: 1023px) calc(46vw - 20px), (max-width: 1240px) 31vw, 380px"
+                />
+              ))}
+            </div>
+          </Container>
+        </Section>
+      )}
 
       <CtaBand />
     </>

@@ -213,6 +213,27 @@ GROUPS = {
   ],
 
   # --- Vrtni objekti --------------------------------------------------------
+  # --- Projekti -----------------------------------------------------------
+  # Skupina pripada projektu /projekti/savna-limbarska-gora. Vrstni red je
+  # vrstni red galerije: načrt, postavitev CLT, ostrešje in kritina, fasada,
+  # dokončana notranjost. Naslovnica projekta ni tu — je posnetek fasade iz
+  # skupine lesene-fasade, da ista datoteka ne leži dvakrat na disku.
+  "savna-limbarska-gora": [
+    ("savna-nacrt",            "Načrt izvedbe CLT sten in ostrešja vrtne lope s prerezi in 3D pogledom"),
+    ("savna-clt-plosce",       "CLT plošče, pripravljene na armiranobetonski plošči pred postavitvijo"),
+    ("savna-prva-stena",       "Prva postavljena CLT stena z zatrepom na pripravljeni plošči"),
+    ("savna-stene-lega",       "Postavljene CLT stene z montirano slemensko lego"),
+    ("savna-meritve",          "Merjenje pred pritrditvijo strešne lege na CLT steno"),
+    ("savna-ostresje",         "Montaža špirovcev dvokapnega ostrešja"),
+    ("savna-kritina-letve",    "Strešna folija in letve pred polaganjem kritine"),
+    ("savna-kritina",          "Dokončana streha vrtne lope med drevesi"),
+    ("savna-fasada-folija",    "Vetrna zapora in podkonstrukcija na zatrepni steni pred oblogo"),
+    ("savna-fasada-letve",     "Pritrjevanje podkonstrukcije prezračevalne fasade"),
+    ("savna-fasada-macesen",   "Macesnova obloga prezračevalne fasade ob oknih"),
+    ("savna-opaz-notranjost",  "Pritrjevanje notranjega opaža pod ostrešjem"),
+    ("savna-interier-savna",   "Dokončana notranjost z vhodom v savno"),
+    ("savna-interier-pocitek", "Kotiček za počitek pred savno z ležalnikom in solno svetilko"),
+  ],
   "vrtne-lope-ute-hiske": [
     ("vrtne-lope-hero", "Lesena vrtna hiška z macesnovo oblogo, letveno steno in teraso"),
     ("vrtne-lope-27",   "Lesena vrtna lopa z dvokapno streho in deskastimi vrati"),

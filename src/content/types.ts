@@ -65,6 +65,14 @@ export type Project = {
   service: string;
   summary: string;
   body: string[];
+  /** Obseg del po postavkah — izpiše se kot seznam pod besedilom. */
+  scope?: string[];
+  /** Ime skupine fotografij v images.ts; hkrati vrstni red galerije. */
+  fotoSkupina?: string;
+  /** Ime načrta ali sheme znotraj `fotoSkupina`. Izriše se neobrezana, čez celotno širino. */
+  shema?: string;
+  /** Naslovnica projekta. Lahko kaže v drugo skupino, da se datoteka ne podvaja. */
+  naslovnica?: { skupina: string; ime: string };
   imageAlt: string;
   placeholder: boolean;
 };
