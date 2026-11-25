@@ -14,37 +14,6 @@ export const metadata = pageMeta({
   noindex: true,
 });
 
-/**
- * Dogodek za GA4: povpraševanje je bilo uspešno oddano.
- *
- * Zakaj na tej strani in ne ob kliku na gumb: obrazec oddaja strežniška akcija,
- * ki ob uspehu preusmeri sem. Šele preusmeritev dokazuje, da je pošta res
- * odšla — klik na gumb tega ne pove. Hkrati na strani ni nobene "use client"
- * datoteke in je tudi zato vdelana skripta prava izbira.
- *
- * Zakaj parameter oddano=1 in ne zgolj obisk /hvala: stran se da osvežiti ali
- * odpreti iz zgodovine, kar bi dogodek poslalo znova. Parameter dobi samo
- * preusmeritev po uspešno poslani pošti, skripta pa ga nemudoma pobriše iz
- * naslova. Honeypot za bote preusmeri na /hvala brez njega.
- *
- * Zakaj čakamo na DOMContentLoaded: pasica za soglasje je v korenski postavitvi
- * izrisana za vsebino strani, zato window.gtag ob zagonu te skripte še ne
- * obstaja. Brez soglasja se ne pošlje nič, ker gtag v tem primeru ni definiran.
- */
-const merjenje = `(function () {
-  if (location.search.indexOf("oddano=1") === -1) return;
-  try { history.replaceState(null, "", location.pathname); } catch (e) {}
-  function poslji() {
-    if (typeof window.gtag !== "function") return;
-    window.gtag("event", "povprasevanje_oddano");
-  }
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", poslji);
-  } else {
-    poslji();
-  }
-})();`;
-
 export default function HvalaPage() {
   return (
     <Section>
@@ -66,7 +35,6 @@ export default function HvalaPage() {
           <Link href="/nasveti" className="sp-btn sp-btn--secondary">Preberi nasvete</Link>
         </div>
       </Container>
-      <script dangerouslySetInnerHTML={{ __html: merjenje }} />
     </Section>
   );
 }

@@ -22,6 +22,13 @@ import { GA_ID, KLJUC_SOGLASJA, VELJAVNOST_DNI } from "@/lib/analitika";
  * njeno odločitev lahko povozil. <html> ima suppressHydrationWarning (glej
  * layout.tsx), zato je atribut na njem varno mesto, pasica pa ostane statična.
  *
+ * Zakaj je tu tudi dogodek o oddanem povpraševanju: strežniška akcija obrazca
+ * po uspehu preusmeri na /hvala, vendar dokumenta ne naloži znova — stran
+ * izriše router v brskalniku. Vdelana skripta na tisti strani se zato nikoli ne
+ * izvede, iz istega razloga kot gumb za preklic soglasja nima svoje. Mesto, ki
+ * se izvede zanesljivo, je ta skripta, zato spremembe naslova prestrežemo tu,
+ * enako kot jih za oglede strani prestreza sam Google Analytics.
+ *
  * Zakaj je poslušalec klikov na dokumentu in ne na posameznih gumbih: ta
  * skripta je v korenski postavitvi in se izvede enkrat, ob prvem nalaganju.
  * Gumb za preklic pa je na strani /piskotki, do katere obiskovalec pride tudi
@@ -93,7 +100,7 @@ const skripta = `(function () {
   function odlozi(stanje) {
     zapisi(stanje);
     koren.setAttribute("data-soglasje", "odloceno");
-    if (stanje === "da") { naloziGA(); } else { pobrisiPiskotke(); }
+    if (stanje === "da") { naloziGA(); konverzija(); } else { pobrisiPiskotke(); }
   }
 
   function preklici() {
@@ -111,6 +118,28 @@ const skripta = `(function () {
     else if (cilj.id === "soglasje-preklic") { preklici(); }
   });
 
+  /* Konverzija: povprasevanje je bilo uspesno oddano.
+     Parameter oddano=1 dobi samo preusmeritev po uspesno poslani posti; pot za
+     honeypot preusmeri brez njega, da boti konverzij ne napihujejo. Parameter
+     pobrisemo sele, ko dogodek res odide, da ga naknadna privolitev se najde. */
+  var poslanaKonverzija = false;
+  var replaceOrig = history.replaceState;
+
+  function konverzija() {
+    if (poslanaKonverzija) return;
+    if (location.pathname !== "/hvala") return;
+    if (location.search.indexOf("oddano=1") === -1) return;
+    if (typeof window.gtag !== "function") return;
+    poslanaKonverzija = true;
+    window.gtag("event", "povprasevanje_oddano");
+    try { replaceOrig.call(history, null, "", location.pathname); } catch (e) {}
+  }
+
+  var pushOrig = history.pushState;
+  history.pushState = function () { var r = pushOrig.apply(this, arguments); konverzija(); return r; };
+  history.replaceState = function () { var r = replaceOrig.apply(this, arguments); konverzija(); return r; };
+  window.addEventListener("popstate", konverzija);
+
   var odlocitev = preberi();
   if (odlocitev === "da") {
     koren.setAttribute("data-soglasje", "odloceno");
@@ -120,6 +149,8 @@ const skripta = `(function () {
   } else {
     koren.setAttribute("data-soglasje", "vprasaj");
   }
+
+  konverzija();
 })();`;
 
 export function ConsentBanner() {
