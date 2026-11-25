@@ -48,6 +48,9 @@ export const projects: Project[] = [
     shema: "savna-nacrt",
     // Vrstni red je potek del. Dva posnetka sta že drugje na strani, zato sta
     // tu navedena po sklicu in ne kopirana v to skupino.
+    // Vrstni red je potek del. Ležeči posnetek zasede celo vrstico, zato sta
+    // oba na mestih, kjer pred njima vrsta ravno izide; sicer bi ostala vrzel.
+    // Posnetki iz drugih skupin so navedeni po sklicu in ne kopirani sem.
     galerija: [
       { skupina: "savna-vrtna-lopa", ime: "savna-clt-plosce" },
       { skupina: "savna-vrtna-lopa", ime: "savna-prva-stena" },
@@ -61,15 +64,18 @@ export const projects: Project[] = [
       { skupina: "savna-vrtna-lopa", ime: "savna-fasada-letve" },
       { skupina: "vrtne-lope-ute-hiske", ime: "vrtne-lope-25" },
       { skupina: "savna-vrtna-lopa", ime: "savna-fasada-macesen" },
+      { skupina: "lesene-fasade", ime: "lesene-fasade-montaza-3" },
       { skupina: "lesene-fasade", ime: "lesene-fasade-montaza-5" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-vrata-detajl" },
+      { skupina: "savna-vrtna-lopa", ime: "savna-okno-detajl" },
       { skupina: "savna-vrtna-lopa", ime: "savna-opaz-notranjost" },
       { skupina: "savna-vrtna-lopa", ime: "savna-interier-garderoba" },
       { skupina: "savna-vrtna-lopa", ime: "savna-interier-savna" },
       { skupina: "savna-vrtna-lopa", ime: "savna-interier-pocitek" },
     ],
-    naslovnica: { skupina: "lesene-fasade", ime: "lesene-fasade-montaza-3" },
+    naslovnica: { skupina: "savna-vrtna-lopa", ime: "savna-koncana-lopa" },
     imageAlt:
-      "Vrtna lopa za zunanjo savno z macesnovo prezračevalno fasado in dvokapnim ostrešjem",
+      "Dokončana vrtna lopa za zunanjo savno z macesnovo prezračevalno fasado in pokritim vhodom",
     placeholder: false,
   },
 ];
