@@ -145,18 +145,27 @@ export default async function ProjektPage({ params }: { params: Promise<{ slug: 
             <p className="sp-eyebrow">Potek del</p>
             <h2 className="mt-3">Kako je nastajalo</h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {slike.map((f) => (
-                <Figure
-                  key={f.base}
-                  foto={f}
-                  alt={f.alt}
-                  /* Razmerje po posamezni fotografiji: posnetki z gradbišča so
-                     pokončni, načrt je ležeč. Enotno 4/3 bi pokončnim odrezalo
-                     44 % višine. */
-                  ratio={f.w >= f.h ? "4/3" : "3/4"}
-                  sizes="(max-width: 639px) 92vw, (max-width: 1023px) calc(46vw - 20px), (max-width: 1240px) 31vw, 380px"
-                />
-              ))}
+              {slike.map((f) => {
+                /* Posnetki z gradbišč so skoraj vsi pokončni. Ležeča med njimi
+                   pusti vrzel v vrsti, zato zasede celo vrstico — mreža pokončne
+                   samodejno nadaljuje v naslednji. Razmerje je tam 16/9, ker bi
+                   4/3 čez celotno širino dalo pretirano visok blok. */
+                const lezeca = f.w >= f.h;
+                return (
+                  <Figure
+                    key={f.base}
+                    foto={f}
+                    alt={f.alt}
+                    ratio={lezeca ? "16/9" : "3/4"}
+                    className={lezeca ? "sm:col-span-2 lg:col-span-3" : undefined}
+                    sizes={
+                      lezeca
+                        ? "(max-width: 1240px) 92vw, 1144px"
+                        : "(max-width: 639px) 92vw, (max-width: 1023px) calc(46vw - 20px), (max-width: 1240px) 31vw, 380px"
+                    }
+                  />
+                );
+              })}
             </div>
           </Container>
         </Section>
