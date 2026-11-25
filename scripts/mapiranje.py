@@ -228,6 +228,9 @@ GROUPS = {
     ("vrtne-lope-9",    "Prva stena lesene hiške na betonski plošči v gozdu"),
     ("vrtne-lope-7",    "Pripravljeni stenski elementi vrtne hiške pred postavitvijo"),
     ("vrtne-lope-1",    "Gradnja vrtne lope — stene iz plošč in strešne letve"),
+    # Montaža obloge na vrtni hiški v gozdu, oktober 2026. Pokončen posnetek —
+    # galerija ga izriše v razmerju 4/3, zato ga obreže na sredinski pas.
+    ("vrtne-lope-montaza-4", "Montaža navpične lesene obloge na vrtni hiški, vidne letve, vetrna zapora in zunanja elektro omarica"),
   ],
   # ZAČASNO: stran Stopnice nima lastnih fotografij. Do takrat sta tu dve, ki
   # res prikazujeta stopnice — gre za isti posnetek kot wpc-terase-31 in -24,

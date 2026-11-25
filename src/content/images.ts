@@ -203,6 +203,7 @@ export const foto: Record<string, Foto[]> = {
     { base: "/slike/vrtne-lope-ute-hiske/vrtne-lope-9", w: 1600, h: 1503, widths: [400, 800, 1200, 1600], alt: "Prva stena lesene hiške na betonski plošči v gozdu" },
     { base: "/slike/vrtne-lope-ute-hiske/vrtne-lope-7", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Pripravljeni stenski elementi vrtne hiške pred postavitvijo" },
     { base: "/slike/vrtne-lope-ute-hiske/vrtne-lope-1", w: 1600, h: 1200, widths: [400, 800, 1200, 1600], alt: "Gradnja vrtne lope — stene iz plošč in strešne letve" },
+    { base: "/slike/vrtne-lope-ute-hiske/vrtne-lope-montaza-4", w: 1932, h: 2576, widths: [400, 800, 1200, 1600], alt: "Montaža navpične lesene obloge na vrtni hiški, vidne letve, vetrna zapora in zunanja elektro omarica" },
   ],
   "stopnice": [
     { base: "/slike/stopnice/stopnice-wpc-1", w: 1159, h: 869, widths: [400, 800, 1159], alt: "Zunanje stopnice in pot iz WPC desk ob hiši" },

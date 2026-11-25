@@ -123,6 +123,9 @@ export const vrtneLopeUteHiske: Service = {
   ],
   woods: ["Smreka", "Sibirski macesen", "Lepljen les"],
   related: ["visoke-grede", "leseni-nadstreski", "lesene-ograje"],
+  // Isti objekt kot posnetka montaže fasade — fotografija leži v skupini
+  // lesene-fasade, tu jo samo pokažemo, da se datoteke ne podvajajo.
+  dodatneFoto: [{ skupina: "lesene-fasade", ime: "lesene-fasade-montaza-5" }],
   heroAlt:
     "Lesena vrtna lopa z nadstreškom iz sibirskega macesna — izvedba Struktura Plus",
 };

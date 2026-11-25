@@ -8,7 +8,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { Container, Section } from "@/components/Container";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Figure } from "@/components/Figure";
-import { heroFoto, galerija } from "@/content/images";
+import { heroFoto, galerija, fotoPoImenu } from "@/content/images";
 import { testimonialsFor } from "@/content/testimonials";
 import { PriceBlock } from "@/components/PriceBlock";
 import { Faq } from "@/components/Faq";
@@ -50,7 +50,14 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     { name: "Storitve", path: "/storitve" },
     { name: service.navLabel, path },
   ];
-  const slike = galerija(service.slug);
+  // Galerija storitve, za njo pa še morebitne fotografije iz drugih skupin
+  // (dodatneFoto). Sklic namesto kopije, da ista slika ne leži dvakrat na disku.
+  const slike = [
+    ...galerija(service.slug),
+    ...(service.dodatneFoto ?? [])
+      .map((d) => fotoPoImenu(d.skupina, d.ime))
+      .filter((f): f is NonNullable<typeof f> => Boolean(f)),
+  ];
   const mnenja = testimonialsFor(service.slug);
   const nasveti = articlesForService(service.slug);
   const related = service.related

@@ -47,6 +47,11 @@ export type Service = {
   /** Vrste lesa, ki jih ta storitev uporablja — kratek razdelek s povezavo na članek. */
   woods?: string[];
   related: string[];
+  /**
+   * Fotografije iz drugih skupin, ki naj se pokažejo tudi v tej galeriji.
+   * Sklic namesto kopije: ista datoteka se ne podvaja na disku.
+   */
+  dodatneFoto?: { skupina: string; ime: string }[];
   heroAlt: string;
 };
 
